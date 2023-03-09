@@ -7,6 +7,7 @@ const Register = () => interopDefault(import('~/pages/register.vue'))
 const Login = () => interopDefault(import('~/pages/login.vue'))
 const Users = () => interopDefault(import('~/pages/users.vue'))
 const Products = () => interopDefault(import('~/pages/product.vue'))
+const InputNewProduct = () => interopDefault(import('~/pages/inputNewProduct.vue'))
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export function createRouter () {
                 path: '/products',
                 component: Products,
                 name: 'product'
+            },
+            {
+                path: '/produts/addnew',
+                component: InputNewProduct,
+                name: 'inputNewProduct'
             }
         ]
     })

@@ -56,7 +56,6 @@
     @import '~/style2.css';
 </style>
 
-
 <script setup>
     import { ref, onMounted, computed, getCurrentInstance } from "vue";
     import ModalUpdateData from "../components/ModalUpdateData.vue";

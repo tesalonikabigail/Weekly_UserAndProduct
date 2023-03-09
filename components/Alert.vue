@@ -1,8 +1,12 @@
 <template>
     <fragment>
-        <b-alert :show="dismissCountDown" dismissible fade variant="warning">
-            {{ outMsg }}
-        </b-alert>
+        <div class="fixed-top mt-5">
+            <b-navbar>
+                <b-alert :show="dismissCountDown" dismissible fade variant="warning">
+                    {{ outMsg }}
+                </b-alert>
+            </b-navbar>
+        </div>
     </fragment>
 </template>
 

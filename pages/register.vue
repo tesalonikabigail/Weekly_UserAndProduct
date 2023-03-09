@@ -15,6 +15,10 @@
     </fragment>
 </template>
 
+<style lang="css" scoped>
+    @import '~/style2.css';
+</style>
+
 <script setup>
     import RegistrationForm from '~/components/Register/RegistrationForm.vue';
 </script>

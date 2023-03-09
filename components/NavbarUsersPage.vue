@@ -30,7 +30,7 @@
                     <b-navbar-nav class="ml-auto" style="display: inline-block; justify-content: right; text-align: right; margin-right: 2%;">
                         <div class="row">
                             <b-nav-item class="col-3" @click="toHome">Home</b-nav-item>
-                            <b-nav-item class="col-3" @click="toRegis">Register</b-nav-item>
+                            <b-nav-item class="col-3" @click="toUsers">Users</b-nav-item>
                             <b-nav-item class="col-3" @click="toProduct">Products</b-nav-item>
                             <b-nav-item class="col-3" @click="toLogout">Logout</b-nav-item>
                         </div>
@@ -51,6 +51,7 @@
     const router = getCurrentInstance().proxy.$router;
     const $root = getCurrentInstance().proxy.$root;
     const $store = $root.$store;
+    const $axios = $root.$axios;
     const ctx = $root.$auth;
 
     const dataLogin = computed(() => $store.getters['regis/dataLogin']);
@@ -59,8 +60,8 @@
     const toHome = () => {
         router.push({ name: 'home' });
     }
-    const toRegis = () => {
-        router.push({ name: 'regis' });
+    const toUsers = () => {
+        router.push({ name: 'usersData' });
     }
     const toProduct = () => {
         router.push({ name: 'product'});

@@ -129,20 +129,282 @@
       "password": "$2a$10$Iz7O76QQ1AjGgF.sbfDSIOl8QogOE2BtZclCxupTVg3PcXNCHQhc."
     },
     {
-      "email": "ioiei@gmail.com",
-      "password": "$2a$10$nbUT7FzZn3GZ4n/zVW/aVeW5zM9Lcv2B3slgOEGzFRc0iTcvMBSfi",
-      "fName": "ioi",
-      "lName": "iei",
-      "noHP": "09971864124",
-      "id": 17
-    },
-    {
       "email": "seokmatt@gmail.com",
       "password": "$2a$10$sjWj7fxaY5C6gYe2yFdcq.yg6.Rup0wFAIUajjLpZ7M2x0.2gvZC6",
       "fName": "Matthew",
       "lName": "Seok",
       "noHP": "089174816581",
-      "id": 18
+      "id": 17
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "product_id": 56282,
+      "product_sku": "A06790303618",
+      "product_name": "FIESTA Ready Meal Spaghetti Carbonara 300 g",
+      "product_desc": "FIESTA Ready Meal Chicken Carbonara Spaghetti 300 g adalah makanan instan siap saji yang praktis dan cepat untuk disajikan, persembahan dari FIESTA. Kini FIESTA Ready Meal telah menghadirkan lini produk inovasi terbaru dari makanan instan siap saji, yakni varian spaghetti dengan saus carbonara. Hadir dengan spaghetti ala Italia dilengkapi dengan saus carbonara dan daging luncheon ayam pilihan yang diolah sesuai dengan resep tradisional Italia, sehingga memiliki rasa spaghetti asli dari Italia. Tersedia dalam kemasan 300 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Ga perlu lagi bingung pas lapar dengan FIESTA Ready Meal Chicken Carbonara Spaghetti 300 g.",
+      "status": 1,
+      "is_alfa_product": 1,
+      "price": 25000,
+      "product_special_price": 25000,
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": 26000,
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7650280002165_20210302084243803_base.jpg",
+          "https://cs1.alfacart.com/product/1/1_A7650280002165_20210302084243803_base.jpg"
+        ]
+      },
+      "alfagift_platform": true,
+      "product_pickup_availability": 1,
+      "product_is_groceries": 1,
+      "product_visibility_pdp": 296,
+      "product_category": null,
+      "product_sub_category": null
+    },
+    {
+      "id": 2,
+      "product_id": 56282,
+      "product_sku": "A06790303619",
+      "product_name": "FIESTA Ready Meal Chicken Mushroom Noodle 300 g",
+      "product_desc": "FIESTA Ready Meal Chicken Mushroom Noodle 300 g adalah inovasi dari sajian makanan instan siap saji terbaru yang dipersembahkan oleh FIESTA. FIESTA Ready Meal kini telah meluncurkan lini produk terbarunya, yakni dengan menghadirkan ready meal dengan varian mie dengan daging ayam dan jamur. Dibuat dengan resep asli untuk dapat menyajikan sajian mie dengan dilengkapi daging ayam serta jamur. Kini telah tersedia dalam kemasan 300 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia di dalam mangkuk dan hanya tinggal dipanaskan dengan microwave. Hadirkan kenikmatan FIESTA Ready Meal Chicken Mushroom Noodle 300 g, sehingga ga perlu lagi pusing pas lapar.",
+      "status": 1,
+      "is_alfa_product": 1,
+      "price": 25000,
+      "product_special_price": 23500,
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": 24000,
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7650250002165_20210302082330098_base.jpg",
+          "https://cs1.alfacart.com/product/1/1_A7650250002165_20210302082330098_base.jpg"
+        ]
+      },
+      "alfagift_platform": true,
+      "product_pickup_availability": 1,
+      "product_is_groceries": 1,
+      "product_visibility_pdp": 296,
+      "product_category": null,
+      "product_sub_category": null
+    },
+    {
+      "id": 3,
+      "product_id": 56283,
+      "product_sku": "A06790303620",
+      "product_name": "FIESTA Ready Meal Rice with Chicken Katsu Donburi 320 g",
+      "product_desc": "FIESTA Ready Meal Rice with Chicken Katsu Donburi 320 g adalah inovasi dari sajian makanan instan siap saji terbaru yang dipersembahkan oleh FIESTA. FIESTA Ready Meal kini telah meluncurkan lini produk terbarunya, yakni dengan menghadirkan ready meal dengan varian nasi dengan chicken katsu donburi. Dibuat dengan resep asli dari Jepang untuk dapat menyajikan ayam katsu dengan dilengkapi saus tonkatsu nikmat yang juga disajikan dengan nasi. Kini telah tersedia dalam kemasan 320 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Bersama FIESTA Ready Meal Rice with Chicken Katsu Donburi 320 g, ga perlu lagi pusing pas lapar.",
+      "status": 1,
+      "is_alfa_product": 1,
+      "price": 25000,
+      "product_special_price": 23500,
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": 24000,
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7650230002165_20210302080542303_base.jpg",
+          "https://cs1.alfacart.com/product/1/1_A7650230002165_20210302080542303_base.jpg"
+        ]
+      },
+      "alfagift_platform": true,
+      "product_pickup_availability": 1,
+      "product_is_groceries": 1,
+      "product_visibility_pdp": 296,
+      "product_category": null,
+      "product_sub_category": null
+    },
+    {
+      "id": 4,
+      "product_id": 56284,
+      "product_sku": "A06790303621",
+      "product_name": "FIESTA Ready Meal Rice with Beef Yakiniku 320 g",
+      "product_desc": "FIESTA Ready Meal Rice with Beef Yakiniku 320 g adalah inovasi dari sajian makanan instan siap saji terbaru yang dipersembahkan oleh FIESTA. FIESTA Ready Meal kini telah meluncurkan lini produk terbarunya, yakni dengan menghadirkan ready meal dengan varian nasi dengan daging sapi yang dimasak dengan bumbu khas yakiniku. Dibuat dengan resep asli Jepang untuk dapat menyajikan sajian daging sapi yang dimasak dengan bumbu yakiniku dan juga disajikan dengan nasi. Kini telah tersedia dalam kemasan 320 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Bersama FIESTA Ready Meal Rice with Beef Yakiniku 320 g, ga perlu lagi pusing pas lapar.",
+      "status": 1,
+      "is_alfa_product": 1,
+      "price": 25000,
+      "product_special_price": 23500,
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": 24000,
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7650210002165_20210301233057268_base.jpg",
+          "https://cs1.alfacart.com/product/1/1_A7650210002165_20210301233057268_base.jpg"
+        ]
+      },
+      "alfagift_platform": true,
+      "product_pickup_availability": 1,
+      "product_is_groceries": 1,
+      "product_visibility_pdp": 296,
+      "product_category": null,
+      "product_sub_category": null
+    },
+    {
+      "id": 5,
+      "product_id": 56285,
+      "product_sku": "A06790303622",
+      "product_name": "FIESTA Ready Meal Chicken Barbeque Noodle 300 g",
+      "product_desc": "FIESTA Ready Meal Chicken Barbeque Noodle 300 g adalah inovasi dari sajian makanan instan siap saji terbaru yang dipersembahkan oleh FIESTA. FIESTA Ready Meal kini telah meluncurkan lini produk terbarunya, yakni dengan menghadirkan ready meal dengan varian mie dengan daging ayam yang dimasak dalam bumbu barbekiu. Dibuat dengan resep asli untuk dapat menyajikan sajian mie dengan daging ayam dan saus barbeque. Kini telah tersedia dalam kemasan 300 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia di dalam mangkuk dan hanya tinggal dipanaskan dengan microwave. Hadirkan kenikmatan FIESTA Ready Meal Chicken Barbeque Noodle 300 g, sehingga ga perlu lagi pusing pas lapar.",
+      "status": 1,
+      "is_alfa_product": 1,
+      "price": 25000,
+      "product_special_price": 23500,
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": 24000,
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7650260002165_20210302083426395_base.jpg",
+          "https://cs1.alfacart.com/product/1/1_A7650260002165_20210302083426395_base.jpg"
+        ]
+      },
+      "alfagift_platform": true,
+      "product_pickup_availability": 1,
+      "product_is_groceries": 1,
+      "product_visibility_pdp": 296,
+      "product_category": null,
+      "product_sub_category": null
+    },
+    {
+      "id": 6,
+      "product_id": 56286,
+      "product_sku": "A06790303623",
+      "product_name": "FIESTA Ready Meal Rice with Karage and Sweet Sour Sauce 320 g",
+      "product_desc": "FIESTA Ready Meal Rice with Karage and Sweet Sour Sauce 320 g adalah makanan instan siap saji yang hadir dengan varian nasi dengan chicken karage dan saus asam manis. Hadir dengan potongan ayam karage berkualitas dengan saus asam manis dan disajikan lengkap dengan nasi dan sayuran. Sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Tersedia dalam kemasan 320 g.",
+      "status": 1,
+      "is_alfa_product": 1,
+      "price": 25000,
+      "product_special_price": 23500,
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": 24000,
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7650220002165_20220104144406537_base.jpg",
+          "https://cs1.alfacart.com/product/1/1_A7650220002165_20220104144406537_base.jpg"
+        ]
+      },
+      "alfagift_platform": true,
+      "product_pickup_availability": 1,
+      "product_is_groceries": 1,
+      "product_visibility_pdp": 296,
+      "product_category": null,
+      "product_sub_category": null
+    },
+    {
+      "id": 7,
+      "product_id": 56287,
+      "product_sku": "A06790303624",
+      "product_name": "FIESTA Ready Meal Rice with Beef Black Pepper 320 g",
+      "product_desc": "FIESTA Ready Meal Rice with Beef Black Pepper 320 g adalah inovasi dari sajian makanan instan siap saji terbaru yang dipersembahkan oleh FIESTA. FIESTA Ready Meal kini telah meluncurkan lini produk terbarunya, yakni dengan menghadirkan ready meal dengan varian nasi dengan daging sapi yang dimasak dengan bumbu lada hitam. Dibuat dengan resep asli untuk dapat menyajikan sajian daging sapi dengan dilumuri saus lada hitam segar yang juga disajikan dengan nasi. Kini telah tersedia dalam kemasan 320 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Bersama FIESTA Ready Meal Rice with Beef Black Pepper 320 g, ga perlu lagi pusing pas lapar.",
+      "status": 1,
+      "is_alfa_product": 1,
+      "price": 25000,
+      "product_special_price": 23500,
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": 24000,
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7650190002165_20220104145106889_base.jpg",
+          "https://cs1.alfacart.com/product/1/1_A7650190002165_20220104145106889_base.jpg"
+        ]
+      },
+      "alfagift_platform": true,
+      "product_pickup_availability": 1,
+      "product_is_groceries": 1,
+      "product_visibility_pdp": 296,
+      "product_category": null,
+      "product_sub_category": null
+    },
+    {
+      "id": 8,
+      "product_id": 56288,
+      "product_sku": "A06790303625",
+      "product_name": "FIESTA Ready Meal Chicken Teriyaki with Rice 320 g",
+      "product_desc": "FIESTA Ready Meal Chicken Teriyaki with Rice 320 g adalah inovasi dari sajian makanan instan siap saji terbaru yang dipersembahkan oleh FIESTA. FIESTA Ready Meal kini telah meluncurkan lini produk terbarunya, yakni dengan menghadirkan ready meal dengan varian nasi dengan chicken teriyaki. Dibuat dengan resep asli dari Jepang untuk dapat menyajikan ayam yang dilumuri dengan saus teriyaki dan dilengkapi sayuran segar yang juga disajikan dengan nasi. Kini telah tersedia dalam kemasan 320 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Bersama FIESTA Ready Meal Chicken Teriyaki with Rice 320 g, ga perlu lagi pusing pas lapar.",
+      "status": 1,
+      "is_alfa_product": 1,
+      "price": 25000,
+      "product_special_price": 23500,
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": 24000,
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7650240002165_20210302082114673_base.jpg",
+          "https://cs1.alfacart.com/product/1/1_A7650240002165_20210302082114673_base.jpg"
+        ]
+      },
+      "alfagift_platform": true,
+      "product_pickup_availability": 1,
+      "product_is_groceries": 1,
+      "product_visibility_pdp": 296,
+      "product_category": null,
+      "product_sub_category": null
+    },
+    {
+      "product_id" : 56289, 
+      "product_sku" : "A06790303626", 
+      "product_name" : "FIESTA Ready Meal Chicken Bolognese Spaghetti 300 g",
+      "product_desc" : "FIESTA Ready Meal Chicken Bolognese Spaghetti 300 g adalah makanan instan siap saji yang praktis dan cepat untuk disajikan, persembahan dari FIESTA. Kini FIESTA Ready Meal telah menghadirkan lini produk inovasi terbaru dari makanan instan siap saji, yakni varian spaghetti dengan chicken bolognese. Hadir dengan spaghetti ala Italia dilengkapi dengan saus bolognese dan daging ayam pilihan yang diolah sesuai dengan resep tradisional Italia, sehingga memiliki rasa spaghetti asli dari Italia. Tersedia dalam kemasan 300 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Ga perlu lagi bingung pas lapar dengan FIESTA Ready Meal Chicken Bolognese Spaghetti 300 g.",
+      "status" : 1, 
+      "is_alfa_product" : 1,
+      "price" : 25000.0,
+      "product_special_price" : 23500.0,
+      "product_special_price_to" : "",
+      "product_special_price_from" : "",
+      "product_alfagift_price" : 24000,   
+      "product_images" : {
+          "type" : "Base Image",
+          "url" : [ 
+              "https://cs1.alfacart.com/product/1/1_A7650270002165_20210302083800436_base.jpg", 
+              "https://cs1.alfacart.com/product/1/1_A7650270002165_20210302083800436_base.jpg"
+          ]
+      },
+      "alfagift_platform" : true,  
+      "product_pickup_availability" : 1,
+      "product_is_groceries" : 1,
+      "product_visibility_pdp" : 296, 
+      "product_category" : null,
+      "product_sub_category" : null
+    },
+    {
+      "product_id" : 56290, 
+      "product_sku" : "A06790303627", 
+      "product_name" : "FIESTA Ready Meal Rice with Beef Rendang 320 g",
+      "product_desc" : "FIESTA Ready Meal Rice with Beef Rendang 320 g adalah inovasi dari sajian makanan instan siap saji terbaru yang dipersembahkan oleh FIESTA. FIESTA Ready Meal kini telah meluncurkan lini produk terbarunya, yakni dengan menghadirkan ready meal dengan varian nasi dengan daging sapi yang dimasak dengan bumbu khas rendang. Dibuat dengan resep asli Padang untuk dapat menyajikan sajian daging sapi yang dimasak dengan bumbu rendang dan juga disajikan dengan nasi serta daun singkong asli. Kini telah tersedia dalam kemasan 320 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Bersama FIESTA Ready Meal Rice with Beef Rendang 320 g, ga perlu lagi pusing pas lapar.",
+      "status" : 1, 
+      "is_alfa_product" : 1,
+      "price" : 25000.0,
+      "product_special_price" : 23500.0,
+      "product_special_price_to" : "",
+      "product_special_price_from" : "",
+      "product_alfagift_price" : 24000,   
+      "product_images" : {
+          "type" : "Base Image",
+          "url" : [ 
+              "https://cs1.alfacart.com/product/1/1_A7650200002165_20210301232645776_base.jpg", 
+              "https://cs1.alfacart.com/product/1/1_A7650200002165_20210301232645776_base.jpg"
+          ]
+      },
+      "alfagift_platform" : true,  
+      "product_pickup_availability" : 1,
+      "product_is_groceries" : 1,
+      "product_visibility_pdp" : 296, 
+      "product_category" : null,
+      "product_sub_category" : null
     }
   ]
 }
