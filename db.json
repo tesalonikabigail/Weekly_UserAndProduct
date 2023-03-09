@@ -1,0 +1,148 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fName": "Tesa",
+      "lName": "Abi",
+      "email": "tesa@gmail.com",
+      "noHP": "09875444567",
+      "password": "$2a$10$MOXkAB076y4L8NRQwMr91OKu8xQAirq593lHugm0PlLzSnWg9INIO"
+    },
+    {
+      "id": 2,
+      "fName": "Bobi",
+      "lName": "Kim",
+      "email": "bobi@gmail.com",
+      "noHP": "08781638104",
+      "password": "$2a$10$wtfYGGE8Kd6qVByegj/AOOLgT6mYDIeFCvFNj5NQRBa5696YHb1Uq"
+    },
+    {
+      "id": 3,
+      "fName": "Fuam",
+      "lName": "Lee",
+      "email": "lfguaz@gmail.com",
+      "noHP": "08971236712",
+      "password": "$2a$10$SQjqjoCUf6u2D0xl1Ehvou/u4//97NsMcg27j20ocoAhEukqG98Pa"
+    },
+    {
+      "id": 4,
+      "fName": "Chris",
+      "lName": "Din",
+      "email": "chrsdean@gmail.com",
+      "noHP": "08126184673",
+      "password": "$2a$10$q3msJwX0mA21cMIMbCu0HuXOmrgX3ZrKSwIBqudvnbMw04RXEjYie"
+    },
+    {
+      "email": "abcdef@gmail.com",
+      "password": "$2a$10$.SAVOCtY1YdiAmexUKB/EOXxMMUOMUnS.qEFOkN2GIFR7gv7CBb6K",
+      "fName": "qwerty",
+      "lName": "abcde",
+      "noHP": "08998194913",
+      "id": 5
+    },
+    {
+      "email": "pope@gmail.com",
+      "password": "$2a$10$DkMV3F0lH6v8llW8V6yd.OW0wwmwwPKa5q6vAZ4NGPPYNgrlIlI6a",
+      "fName": "popo",
+      "lName": "pepe",
+      "noHP": "08674215367",
+      "id": 6
+    },
+    {
+      "email": "abab@gmail.com",
+      "password": "$2a$10$v.Mq6R8rE3GoPQWOhrfxD.sz2iww6Gd0CPtxmhuL0WuSRaWSeKOpi",
+      "fName": "aabb",
+      "lName": "bbaa",
+      "noHP": "099783651319",
+      "id": 7
+    },
+    {
+      "email": "ccddccdd@gmail.com",
+      "password": "$2a$10$yzOMutjurZHqeGJ3iQkgD.xCYXKRtjAuk3jIQISsPmPkoNLoL63Rq",
+      "fName": "ccdd",
+      "lName": "ddcc",
+      "noHP": "09989673614",
+      "id": 8
+    },
+    {
+      "email": "qqqww@gmail.com",
+      "password": "$2a$10$691p8CgN6XGFS6RB/7.dbuMZCrYQnNg1dtnLDm8JauqmS78z5s7MK",
+      "fName": "qqww",
+      "lName": "qqww",
+      "noHP": "0987325642875",
+      "id": 9
+    },
+    {
+      "email": "stst@gmail.com",
+      "password": "$2a$10$Y0KFTCP6VnqzDVBRk2wnh.SeyIUwxc8RpKho//0e0T3U5DBiLB72y",
+      "fName": "ssttt",
+      "lName": "ttss",
+      "noHP": "09078687681",
+      "id": 10
+    },
+    {
+      "email": "yeonjun@gmail.com",
+      "password": "$2a$10$U/ZdNTEI6W2O6HvdN7QZnOJUwH.mOX1th81An5.1m2elskNnWYU6y",
+      "fName": "Yeon",
+      "lName": "Jun",
+      "noHP": "019789167641",
+      "id": 11
+    },
+    {
+      "email": "yseok@gmail.com",
+      "password": "$2a$10$dgg5JN8b9bOkJFpDzT3WPO86Q038JdOdGeFZwxQrwDg2UJqijoyvi",
+      "fName": "Yeon",
+      "lName": "Seok",
+      "noHP": "09898765813",
+      "id": 12
+    },
+    {
+      "email": "semiim@gmail.com",
+      "password": "$2a$10$F81wOwf.xo5eBQ0Jos5s0uiTG5.NEqQFDYy70tnTMFhE7QU5b423u",
+      "fName": "Lim",
+      "lName": "Semi",
+      "noHP": "09896178641",
+      "id": 13
+    },
+    {
+      "email": "seong5@gmail.com",
+      "password": "$2a$10$uBtqCusN3ycStRjSLljxj.jgvpqyPsdumXemnhlQv6SgJfI0ltssm",
+      "fName": "Ong",
+      "lName": "Seongwoo",
+      "noHP": "010897681729",
+      "id": 14
+    },
+    {
+      "id": 15,
+      "fName": "Kim",
+      "lName": "Sunny",
+      "email": "kimseon@gmail.com",
+      "noHP": "089783581681",
+      "password": "$2a$10$oyWpJKETZ7Ak0AFrOzsapuUDMHB24l6s227KZJ4rfmnHKqgwUeVJW"
+    },
+    {
+      "id": 16,
+      "fName": "Zaza",
+      "lName": "Kim",
+      "email": "zaza@gmail.com",
+      "noHP": "09890748162",
+      "password": "$2a$10$Iz7O76QQ1AjGgF.sbfDSIOl8QogOE2BtZclCxupTVg3PcXNCHQhc."
+    },
+    {
+      "email": "ioiei@gmail.com",
+      "password": "$2a$10$nbUT7FzZn3GZ4n/zVW/aVeW5zM9Lcv2B3slgOEGzFRc0iTcvMBSfi",
+      "fName": "ioi",
+      "lName": "iei",
+      "noHP": "09971864124",
+      "id": 17
+    },
+    {
+      "email": "seokmatt@gmail.com",
+      "password": "$2a$10$sjWj7fxaY5C6gYe2yFdcq.yg6.Rup0wFAIUajjLpZ7M2x0.2gvZC6",
+      "fName": "Matthew",
+      "lName": "Seok",
+      "noHP": "089174816581",
+      "id": 18
+    }
+  ]
+}
