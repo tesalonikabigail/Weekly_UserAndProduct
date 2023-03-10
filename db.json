@@ -154,7 +154,6 @@
       "product_images": {
         "type": "Base Image",
         "url": [
-          "https://cs1.alfacart.com/product/1/1_A7650280002165_20210302084243803_base.jpg",
           "https://cs1.alfacart.com/product/1/1_A7650280002165_20210302084243803_base.jpg"
         ]
       },
@@ -181,7 +180,6 @@
       "product_images": {
         "type": "Base Image",
         "url": [
-          "https://cs1.alfacart.com/product/1/1_A7650250002165_20210302082330098_base.jpg",
           "https://cs1.alfacart.com/product/1/1_A7650250002165_20210302082330098_base.jpg"
         ]
       },
@@ -208,7 +206,6 @@
       "product_images": {
         "type": "Base Image",
         "url": [
-          "https://cs1.alfacart.com/product/1/1_A7650230002165_20210302080542303_base.jpg",
           "https://cs1.alfacart.com/product/1/1_A7650230002165_20210302080542303_base.jpg"
         ]
       },
@@ -235,7 +232,6 @@
       "product_images": {
         "type": "Base Image",
         "url": [
-          "https://cs1.alfacart.com/product/1/1_A7650210002165_20210301233057268_base.jpg",
           "https://cs1.alfacart.com/product/1/1_A7650210002165_20210301233057268_base.jpg"
         ]
       },
@@ -262,7 +258,6 @@
       "product_images": {
         "type": "Base Image",
         "url": [
-          "https://cs1.alfacart.com/product/1/1_A7650260002165_20210302083426395_base.jpg",
           "https://cs1.alfacart.com/product/1/1_A7650260002165_20210302083426395_base.jpg"
         ]
       },
@@ -289,7 +284,6 @@
       "product_images": {
         "type": "Base Image",
         "url": [
-          "https://cs1.alfacart.com/product/1/1_A7650220002165_20220104144406537_base.jpg",
           "https://cs1.alfacart.com/product/1/1_A7650220002165_20220104144406537_base.jpg"
         ]
       },
@@ -316,7 +310,6 @@
       "product_images": {
         "type": "Base Image",
         "url": [
-          "https://cs1.alfacart.com/product/1/1_A7650190002165_20220104145106889_base.jpg",
           "https://cs1.alfacart.com/product/1/1_A7650190002165_20220104145106889_base.jpg"
         ]
       },
@@ -343,7 +336,6 @@
       "product_images": {
         "type": "Base Image",
         "url": [
-          "https://cs1.alfacart.com/product/1/1_A7650240002165_20210302082114673_base.jpg",
           "https://cs1.alfacart.com/product/1/1_A7650240002165_20210302082114673_base.jpg"
         ]
       },
@@ -355,56 +347,29 @@
       "product_sub_category": null
     },
     {
-      "product_id" : 56289, 
-      "product_sku" : "A06790303626", 
-      "product_name" : "FIESTA Ready Meal Chicken Bolognese Spaghetti 300 g",
-      "product_desc" : "FIESTA Ready Meal Chicken Bolognese Spaghetti 300 g adalah makanan instan siap saji yang praktis dan cepat untuk disajikan, persembahan dari FIESTA. Kini FIESTA Ready Meal telah menghadirkan lini produk inovasi terbaru dari makanan instan siap saji, yakni varian spaghetti dengan chicken bolognese. Hadir dengan spaghetti ala Italia dilengkapi dengan saus bolognese dan daging ayam pilihan yang diolah sesuai dengan resep tradisional Italia, sehingga memiliki rasa spaghetti asli dari Italia. Tersedia dalam kemasan 300 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Ga perlu lagi bingung pas lapar dengan FIESTA Ready Meal Chicken Bolognese Spaghetti 300 g.",
-      "status" : 1, 
-      "is_alfa_product" : 1,
-      "price" : 25000.0,
-      "product_special_price" : 23500.0,
-      "product_special_price_to" : "",
-      "product_special_price_from" : "",
-      "product_alfagift_price" : 24000,   
-      "product_images" : {
-          "type" : "Base Image",
-          "url" : [ 
-              "https://cs1.alfacart.com/product/1/1_A7650270002165_20210302083800436_base.jpg", 
-              "https://cs1.alfacart.com/product/1/1_A7650270002165_20210302083800436_base.jpg"
-          ]
+      "product_id": 56289,
+      "product_sku": "A06790303626",
+      "product_name": "FIESTA Ready Meal Chicken Bolognese Spaghetti 300 g",
+      "product_desc": "FIESTA Ready Meal Chicken Bolognese Spaghetti 300 g adalah makanan instan siap saji yang praktis dan cepat untuk disajikan, persembahan dari FIESTA. Kini FIESTA Ready Meal telah menghadirkan lini produk inovasi terbaru dari makanan instan siap saji, yakni varian spaghetti dengan chicken bolognese. Hadir dengan spaghetti ala Italia dilengkapi dengan saus bolognese dan daging ayam pilihan yang diolah sesuai dengan resep tradisional Italia, sehingga memiliki rasa spaghetti asli dari Italia. Tersedia dalam kemasan 300 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Ga perlu lagi bingung pas lapar dengan FIESTA Ready Meal Chicken Bolognese Spaghetti 300 g.",
+      "status": 1,
+      "is_alfa_product": 1,
+      "price": 25000,
+      "product_special_price": 23500,
+      "product_special_price_to": "19-02-2023",
+      "product_special_price_from": "20-03-2023",
+      "product_alfagift_price": 24000,
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7650270002165_20210302083800436_base.jpg"
+        ]
       },
-      "alfagift_platform" : true,  
-      "product_pickup_availability" : 1,
-      "product_is_groceries" : 1,
-      "product_visibility_pdp" : 296, 
-      "product_category" : null,
-      "product_sub_category" : null
-    },
-    {
-      "product_id" : 56290, 
-      "product_sku" : "A06790303627", 
-      "product_name" : "FIESTA Ready Meal Rice with Beef Rendang 320 g",
-      "product_desc" : "FIESTA Ready Meal Rice with Beef Rendang 320 g adalah inovasi dari sajian makanan instan siap saji terbaru yang dipersembahkan oleh FIESTA. FIESTA Ready Meal kini telah meluncurkan lini produk terbarunya, yakni dengan menghadirkan ready meal dengan varian nasi dengan daging sapi yang dimasak dengan bumbu khas rendang. Dibuat dengan resep asli Padang untuk dapat menyajikan sajian daging sapi yang dimasak dengan bumbu rendang dan juga disajikan dengan nasi serta daun singkong asli. Kini telah tersedia dalam kemasan 320 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Bersama FIESTA Ready Meal Rice with Beef Rendang 320 g, ga perlu lagi pusing pas lapar.",
-      "status" : 1, 
-      "is_alfa_product" : 1,
-      "price" : 25000.0,
-      "product_special_price" : 23500.0,
-      "product_special_price_to" : "",
-      "product_special_price_from" : "",
-      "product_alfagift_price" : 24000,   
-      "product_images" : {
-          "type" : "Base Image",
-          "url" : [ 
-              "https://cs1.alfacart.com/product/1/1_A7650200002165_20210301232645776_base.jpg", 
-              "https://cs1.alfacart.com/product/1/1_A7650200002165_20210301232645776_base.jpg"
-          ]
-      },
-      "alfagift_platform" : true,  
-      "product_pickup_availability" : 1,
-      "product_is_groceries" : 1,
-      "product_visibility_pdp" : 296, 
-      "product_category" : null,
-      "product_sub_category" : null
+      "alfagift_platform": true,
+      "product_pickup_availability": 1,
+      "product_is_groceries": 1,
+      "product_visibility_pdp": 296,
+      "product_category": null,
+      "product_sub_category": null
     }
   ]
 }

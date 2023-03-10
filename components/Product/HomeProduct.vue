@@ -2,6 +2,7 @@
     <fragment>
         <b-overlay :show="notFinish">
             <NavbarUsersPage />
+            <!-- <ProductCarousel /> -->
 
             <section v-if="dismissCountDown !== 0">
                 <Alert :aType="2"/>
@@ -27,7 +28,7 @@
             </b-modal>
 
             <div class="container-fluid" style="width: 80%">
-                <div @click="toAddNewProduct" class="mt-2" style="display: flex; justify-content: right; align-items: right;">
+                <div @click="toAddNewProduct" class="mt-2" style="cursor: pointer; display: flex; justify-content: right; align-items: right;">
                     <p class="mt-2" style="color: #31A2CB;">Add New Product</p>
                     <b-icon style="width: 5vw; height: 5vh;" icon="plus-square-fill" variant="info"></b-icon>
                 </div>
@@ -35,13 +36,13 @@
                 <div style="display: flex; jusitfy-content: center; align-items: center; width: 100%"> <!-- row-cols-5 --> <!-- v-for="(p, index) in products" :key="index" -->
                     <div class="row mb-4">
                         <div v-for="(d, index) in dataProducts" :key="index" class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                            <b-card @click="showModal(d.id)" bg-variant="light" :img-src="d.product_images.url[0]" img-alt="Image" img-top footer-tag="footer" style="cursor: pointer; max-width: 15rem; border-radius: 10px;" class="mb-2 mt-5">
+                            <b-card bg-variant="light" :img-src="d.product_images.url[0]" img-alt="Image" img-top footer-tag="footer" style="cursor: pointer; max-width: 15rem; border-radius: 10px;" class="mb-2 mt-5">
                                 <p style="height: 3.5rem; font-family: 'Poppins', sans-serif; font-size: 15px">{{ d.product_name }}</p>
                                 <b-card-text style="color: darkgrey; margin-bottom: 0px; font-size: 12px;"><del>Rp {{ d.price }}</del></b-card-text>
                                 <b-card-text style="color: #31A2CB; font-weight: bold; font-size: 18px">Rp {{ d.product_special_price}}</b-card-text>
 
                                 <div class="row d-flex justify-content-center mb-auto">
-                                    <b-button size="md" style="margin-right: 2%" variant="info"><b-icon icon="cart"></b-icon></b-button>
+                                    <!-- <b-button size="md" style="margin-right: 2%" variant="info"><b-icon icon="cart"></b-icon></b-button> -->
                                     <b-button size="md" style="margin-right: 2%" variant="success"><b-icon icon="pencil-square"></b-icon></b-button>           
                                     <b-button size="md" variant="danger" @click="toDeleteProductData(d.id)"><b-icon icon="trash"></b-icon></b-button>   
                                 </div>
@@ -87,7 +88,7 @@
     }
 
     const toAddNewProduct = () => {
-        router.push({ name: 'inputNewProduct' })
+        router.push({ name:'inputNewProduct' });
     }
 
     const confirmDeletion = async(conIn) => {

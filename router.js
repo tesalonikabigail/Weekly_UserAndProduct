@@ -44,7 +44,7 @@ export function createRouter () {
                 name: 'product'
             },
             {
-                path: '/produts/addnew',
+                path: '/products/addnew',
                 component: InputNewProduct,
                 name: 'inputNewProduct'
             }

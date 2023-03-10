@@ -14,7 +14,14 @@ export const actions = ({
             console.log(err)
         }
     },
-    // create
+    async addProductData({ commit }, { axiosInstance, val }){
+        try{
+            await axiosInstance.$post(API_URL_AUTH + '/products', val);
+            commit('ADD_PRODUCT', val);
+        } catch(err){
+            console.log(err)
+        }
+    },
     // update
     async deleteProductData({ commit }, { axiosInstance, val }){
         try{
@@ -27,6 +34,9 @@ export const actions = ({
 
 export const mutations = ({
     GET_PRODUCT(state, data){
+        state.data = data;
+    },
+    ADD_PRODUCT(state, data){
         state.data = data;
     }
 })
