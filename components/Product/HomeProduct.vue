@@ -8,13 +8,12 @@
                 <Alert :aType="2"/>
             </section>
 
-            <b-modal class="font-title" v-model="cek" hide-footer no-close-on-backdrop>
+            <!-- <b-modal class="font-title" v-model="cek" hide-footer no-close-on-backdrop>
                 <template #modal-header="{ close }">
-                    <!-- <h4 style="color: grey">{{ ambilData.product_name }}</h4> -->
                     <b-button id="btnClose" size="sm" variant="outline-danger" @click="hideModal">Close</b-button>
                 </template>
                 <ProductDetail v-if="ambilData" :prodData="ambilData"/>
-            </b-modal>
+            </b-modal> -->
 
             <b-modal class="font-title" v-model="cekDelete" hide-footer no-close-on-backdrop>
                 <template #modal-header="{ close }">
@@ -37,13 +36,18 @@
                     <div class="row mb-4">
                         <div v-for="(d, index) in dataProducts" :key="index" class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
                             <b-card bg-variant="light" :img-src="d.product_images.url[0]" img-alt="Image" img-top footer-tag="footer" style="cursor: pointer; max-width: 15rem; border-radius: 10px;" class="mb-2 mt-5">
-                                <p style="height: 3.5rem; font-family: 'Poppins', sans-serif; font-size: 15px">{{ d.product_name }}</p>
-                                <b-card-text style="color: darkgrey; margin-bottom: 0px; font-size: 12px;"><del>Rp {{ d.price }}</del></b-card-text>
-                                <b-card-text style="color: #31A2CB; font-weight: bold; font-size: 18px">Rp {{ d.product_special_price}}</b-card-text>
+                                <p style="height: 4.5rem; font-family: 'Poppins', sans-serif; font-size: 15px">{{ d.product_name }}</p>
+                                <section v-if="d.product_special_price < d.price" style="height: 1rem">
+                                    <b-card-text style="color: darkgrey; margin-bottom: 0px; font-size: 12px;"><del>{{ d.price | toRp }}</del></b-card-text>
+                                </section>
+                                <section v-else style="height: 1rem">
+                                    <b-card-text></b-card-text>
+                                </section>
+                                <b-card-text style="color: #31A2CB; font-weight: bold; font-size: 18px">{{ d.product_special_price | toRp }}</b-card-text>
 
                                 <div class="row d-flex justify-content-center mb-auto">
                                     <!-- <b-button size="md" style="margin-right: 2%" variant="info"><b-icon icon="cart"></b-icon></b-button> -->
-                                    <b-button size="md" style="margin-right: 2%" variant="success"><b-icon icon="pencil-square"></b-icon></b-button>           
+                                    <b-button size="md" style="margin-right: 2%" variant="success" @click="toUpdateProductData(d.product_id)"><b-icon icon="pencil-square"></b-icon></b-button>           
                                     <b-button size="md" variant="danger" @click="toDeleteProductData(d.id)"><b-icon icon="trash"></b-icon></b-button>   
                                 </div>
                             </b-card>
@@ -71,21 +75,8 @@
     const activeID = ref(0);
     const cekDelete = ref(false);
     const dismissCountDown = ref(0);
-    const cek = ref(false);
 
     const dataProducts = computed(() => $store.getters['products/fetchProduct']);
-    const ambilData = computed(() => {
-        const a = dataProducts?.value?.filter((item) => item.id == activeID.value) ?? {};
-        return (a.length > 0) ? a[0] : {};
-    }); 
-
-    const showModal = (id) => {
-        cek.value = true;
-        activeID.value = id;
-    }
-    const hideModal = () => {
-        cek.value = false;
-    }
 
     const toAddNewProduct = () => {
         router.push({ name:'inputNewProduct' });
@@ -110,6 +101,11 @@
         else
             cekDelete.value = false;
     }
+
+    const toUpdateProductData = (id) => {
+        router.push({ name:'updateProduct', params: { id: id } });
+    }
+
     const toDeleteProductData = async(id) => {
         activeID.value = id;
         cekDelete.value = true;

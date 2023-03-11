@@ -19,11 +19,27 @@
     const props = defineProps(['aType']);
 
     if(props.aType == 1){
-        outMsg.value = forAlert(1);
+        outMsg.value = forAlert(1, "Updated");
         dismissCountDown.value = 1;
     }
     else if(props.aType == 2){
-        outMsg.value = forAlert(2);
+        outMsg.value = forAlert(1, "Deleted");
+        dismissCountDown.value = 3;
+    }
+    else if(props.aType == 3){
+        outMsg.value = forAlert(1, "Added");
+        dismissCountDown.value = 2;
+    }
+    else if(props.aType == 4){
+        outMsg.value = forAlert(2, "Inserting");
+        dismissCountDown.value = 3;
+    }
+    else if(props.aType == 5){
+        outMsg.value = forAlert(1, "Updated");
+        dismissCountDown.value = 2;
+    }
+    else if(props.aType == 6){
+        outMsg.value = forAlert(2, "Updating");
         dismissCountDown.value = 3;
     }
 

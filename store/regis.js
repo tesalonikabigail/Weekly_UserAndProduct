@@ -17,9 +17,6 @@ const API_URL = 'http://localhost:8080';
 const API_URL_AUTH = 'http://localhost:8080/660' // buat semua kecuali login dan regis
 
 export const actions = ({
-    // setRegis({ commit }, { fName, lName, email, noHP, pass, conPass }) {
-    //     commit('SET_REGIS', { fName, lName, email, noHP, pass, conPass })
-    // },
     setErr({ commit },  err ) {
         commit('SET_ERR', err)
     },
@@ -41,7 +38,7 @@ export const actions = ({
     // },
     async inputNewUserData({ commit }, { axiosInstance, val }){
         try{
-            const res = await axiosInstance.$post(API_URL + '/register', val);
+            const res = await axiosInstance.$post(API_URL_AUTH + '/register', val);
             commit('SET_REGIS', res);
         } catch(err){
             commit('ERR_MSG', err.response.data);
@@ -49,7 +46,7 @@ export const actions = ({
     },
     async updateUserData({ commit }, { axiosInstance, val }) {
         try {
-            const res = await axiosInstance.$put(`${ API_URL }/users/${ val.id }`, val);
+            const res = await axiosInstance.$put(`${ API_URL_AUTH }/users/${ val.id }`, val);
             commit('UPDATING_USER', res);
             commit('REQUEST_STATUS', true);
             commit('MODAL_STATUS', true);

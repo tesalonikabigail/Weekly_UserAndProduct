@@ -1,5 +1,5 @@
 <template>
-    <div class="mx-auto" style="width: 100vw; height: 60vh; overflow: hidden">
+    <div class="mx-auto" style="width: 100vw; height: 60vh; overflow-y: hidden">
         <b-carousel id="carousel-1" v-model="slide" :interval="4000" controls indicators style="text-shadow: 1px 1px 2px #333;" @sliding-start="onSlideStart" @sliding-end="onSlideEnd">
             <b-carousel-slide caption="Welcome to Products Page" img-src="https://picsum.photos/1024/480/?image=52"></b-carousel-slide>
             <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54"></b-carousel-slide>

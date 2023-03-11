@@ -12,12 +12,11 @@ export const cekValidasi = (item, min, max, regex, msg, msg2, cek) => {
     return false;
 }
 
-export const forAlert = (aType) => {
+export const forAlert = (aType, msg) => {
     if(aType === 1)
-        return "Data Has Been Successfully Updated";
+        return `Data Has Been Successfully ${ msg }`;
     else if(aType === 2)
-        return "Data Has Been Successfully Deleted";
-    else
-        return "";
+        return `Data ${ msg } Failed`;
+    return "";
 }
 

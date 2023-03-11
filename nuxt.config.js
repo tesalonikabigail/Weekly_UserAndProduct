@@ -27,7 +27,8 @@ export default {
   plugins: [
     '~/plugins/global-components.js',
     '~/plugins/axios.js',
-    '~/plugins/vee-validate.js'
+    '~/plugins/vee-validate.js',
+    '~/plugins/filters.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

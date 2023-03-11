@@ -80,8 +80,10 @@
     
     const dataUser = computed(() => $store.getters['regis/fetchUser']);
     const ambilData = computed(() => {
-        const a = dataUser?.value?.filter((item) => item.id == activeID.value) ?? {}; // diambil row yg button "update" nya di klik doang (krna pke filter)
-        return (a.length > 0) ? a[0] : {};        // item yg diambil cmn item dengan id yg sama kyk activeID (id yg di klik button update nya)
+        if(activeID.value !== 0){
+            const a = dataUser.value.filter((item) => item.id == activeID.value) ?? {}; // diambil row yg button "update" nya di klik doang (krna pke filter)
+            return (a.length > 0) ? a[0] : {};        // item yg diambil cmn item dengan id yg sama kyk activeID (id yg di klik button update nya)
+        }
     }); 
 
     const confirmDeletion = async(conIn) => {

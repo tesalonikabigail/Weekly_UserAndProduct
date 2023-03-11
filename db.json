@@ -115,18 +115,10 @@
     {
       "id": 15,
       "fName": "Kim",
-      "lName": "Sunny",
+      "lName": "Seon",
       "email": "kimseon@gmail.com",
       "noHP": "089783581681",
-      "password": "$2a$10$oyWpJKETZ7Ak0AFrOzsapuUDMHB24l6s227KZJ4rfmnHKqgwUeVJW"
-    },
-    {
-      "id": 16,
-      "fName": "Zaza",
-      "lName": "Kim",
-      "email": "zaza@gmail.com",
-      "noHP": "09890748162",
-      "password": "$2a$10$Iz7O76QQ1AjGgF.sbfDSIOl8QogOE2BtZclCxupTVg3PcXNCHQhc."
+      "password": "$2a$10$cZaFEt/foLWtsNCzZyekbO/5FTyFT6geUgvs.IXwij8ig.aY7YvC."
     },
     {
       "email": "seokmatt@gmail.com",
@@ -134,6 +126,14 @@
       "fName": "Matthew",
       "lName": "Seok",
       "noHP": "089174816581",
+      "id": 16
+    },
+    {
+      "email": "keita@gmail.com",
+      "password": "$2a$10$dIp3fb4TkOig5FRwBfEyCu2SiJNACgWMVoiAyJgsmAd/vF1Cp65JK",
+      "fName": "Terazono",
+      "lName": "Keita",
+      "noHP": "08964187658",
       "id": 17
     }
   ],
@@ -148,8 +148,8 @@
       "is_alfa_product": 1,
       "price": 25000,
       "product_special_price": 25000,
-      "product_special_price_to": "",
-      "product_special_price_from": "",
+      "product_special_price_to": "2023-03-20",
+      "product_special_price_from": "2023-03-10",
       "product_alfagift_price": 26000,
       "product_images": {
         "type": "Base Image",
@@ -157,11 +157,11 @@
           "https://cs1.alfacart.com/product/1/1_A7650280002165_20210302084243803_base.jpg"
         ]
       },
-      "alfagift_platform": true,
+      "alfagift_platform": "1",
       "product_pickup_availability": 1,
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
-      "product_category": null,
+      "product_category": "1",
       "product_sub_category": null
     },
     {
@@ -174,8 +174,8 @@
       "is_alfa_product": 1,
       "price": 25000,
       "product_special_price": 23500,
-      "product_special_price_to": "",
-      "product_special_price_from": "",
+      "product_special_price_to": "2023-02-10",
+      "product_special_price_from": "2023-03-18",
       "product_alfagift_price": 24000,
       "product_images": {
         "type": "Base Image",
@@ -183,11 +183,11 @@
           "https://cs1.alfacart.com/product/1/1_A7650250002165_20210302082330098_base.jpg"
         ]
       },
-      "alfagift_platform": true,
+      "alfagift_platform": "1",
       "product_pickup_availability": 1,
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
-      "product_category": null,
+      "product_category": "1",
       "product_sub_category": null
     },
     {
@@ -200,8 +200,8 @@
       "is_alfa_product": 1,
       "price": 25000,
       "product_special_price": 23500,
-      "product_special_price_to": "",
-      "product_special_price_from": "",
+      "product_special_price_to": "2023-04-11",
+      "product_special_price_from": "2023-04-10",
       "product_alfagift_price": 24000,
       "product_images": {
         "type": "Base Image",
@@ -209,11 +209,11 @@
           "https://cs1.alfacart.com/product/1/1_A7650230002165_20210302080542303_base.jpg"
         ]
       },
-      "alfagift_platform": true,
+      "alfagift_platform": "1",
       "product_pickup_availability": 1,
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
-      "product_category": null,
+      "product_category": "1",
       "product_sub_category": null
     },
     {
@@ -226,8 +226,8 @@
       "is_alfa_product": 1,
       "price": 25000,
       "product_special_price": 23500,
-      "product_special_price_to": "",
-      "product_special_price_from": "",
+      "product_special_price_to": "2023-03-17",
+      "product_special_price_from": "2023-03-02",
       "product_alfagift_price": 24000,
       "product_images": {
         "type": "Base Image",
@@ -235,11 +235,11 @@
           "https://cs1.alfacart.com/product/1/1_A7650210002165_20210301233057268_base.jpg"
         ]
       },
-      "alfagift_platform": true,
+      "alfagift_platform": "1",
       "product_pickup_availability": 1,
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
-      "product_category": null,
+      "product_category": "1",
       "product_sub_category": null
     },
     {
@@ -252,8 +252,8 @@
       "is_alfa_product": 1,
       "price": 25000,
       "product_special_price": 23500,
-      "product_special_price_to": "",
-      "product_special_price_from": "",
+      "product_special_price_to": "2023-04-01",
+      "product_special_price_from": "2023-03-28",
       "product_alfagift_price": 24000,
       "product_images": {
         "type": "Base Image",
@@ -261,11 +261,11 @@
           "https://cs1.alfacart.com/product/1/1_A7650260002165_20210302083426395_base.jpg"
         ]
       },
-      "alfagift_platform": true,
+      "alfagift_platform": "1",
       "product_pickup_availability": 1,
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
-      "product_category": null,
+      "product_category": "1",
       "product_sub_category": null
     },
     {
@@ -278,8 +278,8 @@
       "is_alfa_product": 1,
       "price": 25000,
       "product_special_price": 23500,
-      "product_special_price_to": "",
-      "product_special_price_from": "",
+      "product_special_price_to": "2023-03-14",
+      "product_special_price_from": "2023-03-11",
       "product_alfagift_price": 24000,
       "product_images": {
         "type": "Base Image",
@@ -287,11 +287,11 @@
           "https://cs1.alfacart.com/product/1/1_A7650220002165_20220104144406537_base.jpg"
         ]
       },
-      "alfagift_platform": true,
+      "alfagift_platform": "1",
       "product_pickup_availability": 1,
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
-      "product_category": null,
+      "product_category": "1",
       "product_sub_category": null
     },
     {
@@ -304,8 +304,8 @@
       "is_alfa_product": 1,
       "price": 25000,
       "product_special_price": 23500,
-      "product_special_price_to": "",
-      "product_special_price_from": "",
+      "product_special_price_to": "2023-03-19",
+      "product_special_price_from": "2023-03-09",
       "product_alfagift_price": 24000,
       "product_images": {
         "type": "Base Image",
@@ -313,11 +313,11 @@
           "https://cs1.alfacart.com/product/1/1_A7650190002165_20220104145106889_base.jpg"
         ]
       },
-      "alfagift_platform": true,
+      "alfagift_platform": "1",
       "product_pickup_availability": 1,
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
-      "product_category": null,
+      "product_category": "1",
       "product_sub_category": null
     },
     {
@@ -330,8 +330,8 @@
       "is_alfa_product": 1,
       "price": 25000,
       "product_special_price": 23500,
-      "product_special_price_to": "",
-      "product_special_price_from": "",
+      "product_special_price_to": "2023-03-30",
+      "product_special_price_from": "2023-03-15",
       "product_alfagift_price": 24000,
       "product_images": {
         "type": "Base Image",
@@ -339,14 +339,15 @@
           "https://cs1.alfacart.com/product/1/1_A7650240002165_20210302082114673_base.jpg"
         ]
       },
-      "alfagift_platform": true,
+      "alfagift_platform": "1",
       "product_pickup_availability": 1,
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
-      "product_category": null,
+      "product_category": "1",
       "product_sub_category": null
     },
     {
+      "id": 9,
       "product_id": 56289,
       "product_sku": "A06790303626",
       "product_name": "FIESTA Ready Meal Chicken Bolognese Spaghetti 300 g",
@@ -355,8 +356,8 @@
       "is_alfa_product": 1,
       "price": 25000,
       "product_special_price": 23500,
-      "product_special_price_to": "19-02-2023",
-      "product_special_price_from": "20-03-2023",
+      "product_special_price_to": "20-03-2023",
+      "product_special_price_from": "19-02-2023",
       "product_alfagift_price": 24000,
       "product_images": {
         "type": "Base Image",
@@ -364,12 +365,90 @@
           "https://cs1.alfacart.com/product/1/1_A7650270002165_20210302083800436_base.jpg"
         ]
       },
-      "alfagift_platform": true,
+      "alfagift_platform": "1",
       "product_pickup_availability": 1,
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
-      "product_category": null,
+      "product_category": "1",
       "product_sub_category": null
+    },
+    {
+      "id": 10,
+      "product_id": 56290,
+      "product_sku": "A06790303627",
+      "product_name": "FIESTA Ready Meal Rice with Beef Rendang 320 g",
+      "product_desc": "FIESTA Ready Meal Rice with Beef Rendang 320 g adalah inovasi dari sajian makanan instan siap saji terbaru yang dipersembahkan oleh FIESTA. FIESTA Ready Meal kini telah meluncurkan lini produk terbarunya, yakni dengan menghadirkan ready meal dengan varian nasi dengan daging sapi yang dimasak dengan bumbu khas rendang. Dibuat dengan resep asli Padang untuk dapat menyajikan sajian daging sapi yang dimasak dengan bumbu rendang dan juga disajikan dengan nasi serta daun singkong asli. Kini telah tersedia dalam kemasan 320 gram yang sangat praktis dan mudah penyajiannya, karena sudah tersedia mangkuk dan hanya tinggal dipanaskan dengan microwave. Bersama FIESTA Ready Meal Rice with Beef Rendang 320 g, ga perlu lagi pusing pas lapar.",
+      "status": 1,
+      "is_alfa_product": 1,
+      "price": 25000,
+      "product_special_price": 23500,
+      "product_special_price_to": "2023-03-28",
+      "product_special_price_from": "2023-03-14",
+      "product_alfagift_price": 24000,
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7650200002165_20210301232645776_base.jpg"
+        ]
+      },
+      "alfagift_platform": "1",
+      "product_pickup_availability": 1,
+      "product_is_groceries": 1,
+      "product_visibility_pdp": 296,
+      "product_category": "1",
+      "product_sub_category": null
+    },
+    {
+      "product_id": "56291",
+      "product_sku": "A06790303628",
+      "product_name": "Yakult Minuman Probiotik 5 pcs",
+      "product_desc": "Yakult Minuman Probiotik 5 pcs adalah minuman sehat yang berasal dari susu fermentasi dengan memiliki kandungan lebih dari 6,5 miliar bakteri  L. casei Shirota strain pada setiap botolnya. Bakteri yang terkandung pada setiap botol Yakult termasuk ke dalam golongan bakteri yang terbukti aman bagi manusia, kuat dan tahan terhadap asam lambung dan cairan empedu, sehingga bisa sampai ke dalam usus kita dalam keadaan hidup dan telah terbukti bermanfaat untuk membantu menjaga pencernaan selalu baik. Terbuat dari bahan-bahan alami berkualitas tinggi tanpa tambahan zat pengawet atau pewarna buatan. Tersedia dalam kemasan pack isi 5 pcs. Cintai ususmu, minum Yakult tiap hari!",
+      "status": "1",
+      "is_alfa_product": "1",
+      "price": "12000",
+      "product_special_price": "11500",
+      "product_special_price_to": "2023-03-12",
+      "product_special_price_from": "2023-03-10",
+      "product_alfagift_price": "12500",
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/_6_1_6149_1_0_base.jpg"
+        ]
+      },
+      "alfagift_platform": "1",
+      "product_pickup_availability": "1",
+      "product_is_groceries": "1",
+      "product_visibility_pdp": 296,
+      "product_category": "2",
+      "product_sub_category": null,
+      "id": 11
+    },
+    {
+      "product_id": "56292",
+      "product_sku": "A06790303629",
+      "product_name": "KRATINGDAENG Energy Drink Botol 150 ml",
+      "product_desc": "KRATINGDAENG Energy Drink Botol 150 ml adalah sebuah produk minuman berenergi dalam kemasan. Dirancang khusus untuk membantu meningkatkan stamina serta menyegarkan tubuh dan pikiran. Dibuat dengan menggunakan bahan berkualitas yang diolah menggunakan teknologi modern. Selain untuk meningkatkan stamina, kratingdaeng juga dapat membantu meningkatkan fokus dan kewaspadaan. Memiliki rasa yang manis dengan sensasi rasa asam yang segar, dapat membantu meningkatkan dan memperbaiki mood. Dikemas secara khusus dalam kemasan botol kaca ukuran 150 ml. Cocok diminum saat akan melakukan aktivitas berat atau saat butuh meningkatkan fokus saat bekerja. Lebih nikmat jika diminum dalam kondisi dingin. Segera miliki KRATINGDAENG Energy Drink Botol 150 ml untuk membantu meningkatkan stamina anda.",
+      "status": "1",
+      "is_alfa_product": "0",
+      "price": "7900",
+      "product_special_price": "5200",
+      "product_special_price_to": "2023-03-18",
+      "product_special_price_from": "2023-03-11",
+      "product_alfagift_price": "8000",
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A12630003501_20210708151453027_base.jpg"
+        ]
+      },
+      "alfagift_platform": "1",
+      "product_pickup_availability": "1",
+      "product_is_groceries": "0",
+      "product_visibility_pdp": 296,
+      "product_category": "2",
+      "product_sub_category": null,
+      "id": 12
     }
   ]
 }
