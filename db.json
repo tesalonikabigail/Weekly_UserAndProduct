@@ -449,6 +449,58 @@
       "product_category": "2",
       "product_sub_category": null,
       "id": 12
+    },
+    {
+      "product_id": "56293",
+      "product_sku": "A06790303630",
+      "product_name": "POCARI SWEAT Ion Water 350 ml",
+      "product_desc": "POCARI SWEAT Ion Water 350 ml adalah persembahan terbaru Pocari Sweat yang lebih light untuk Anda yang tidak banyak melakukan aktivitas berat. Segala manfaatnya akan meresap dengan cepat dalam tubuh seperti air dan merehidrasi tubuh dari dalam. Kemasan botol mininya yang praktis menjadikannya mudah dibawa dalam genggaman ke mana pun Anda bergerak. Gantikan ion dan cairan tubuhmu dengan ION WATER yang memiliki rasa lebih ringan dan kalori lebih rendah (hanya 14 kkal /100 ml). Komposisi ionnya mirip dengan komposisi ion pada cairan tubuh, cocok diminum setelah berolahraga atau aktivitas seharian. Gapai mimpi dengan semangat yang luar biasa bersama manfaat Pocari Sweat Ion Water 350 ml.",
+      "status": "1",
+      "is_alfa_product": "0",
+      "price": "6700",
+      "product_special_price": "6700",
+      "product_special_price_to": "2023-03-12",
+      "product_special_price_from": "2023-03-10",
+      "product_alfagift_price": "7000",
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A10800630052_20200326175220461_base.jpg"
+        ]
+      },
+      "alfagift_platform": "1",
+      "product_pickup_availability": "1",
+      "product_is_groceries": "0",
+      "product_visibility_pdp": 296,
+      "product_category": "2",
+      "product_sub_category": null,
+      "id": 13
+    },
+    {
+      "product_id": "56294",
+      "product_sku": "A06790303631",
+      "product_name": "ULTRA TEH KOTAK Blackcurrant 200 ml",
+      "product_desc": "ULTRA TEH KOTAK Blackcurrant 200 ml adalah minuman teh dalam kemasan yang dihasilkan dari ekstrak daun teh alami yang dipetik dari perkebunan teh terbaik Indonesia. Daun teh pilihan tersebut dipadukan dengan aroma buah blackcurrant sehingga dihasilkan minuman kotak teh dengan sensasi yang istimewa. Kesegaran dan aroma Teh Kotak Ultra dapat terjaga dengan baik karena dipanaskan secara cepat dalam proses Ultra High Temperature (UHT) pada suhu 120 derajat celcius. Proses tersebut, ditambah dengan pengemasan dalam enam lapisan karton (polyethylene plastic, alluminium foil, dan kertas pelindung ultra violet, udara, dan bakteri), menjadikan Teh Kotak ini juga sehat dikonsumsi. Tersedia dalam kemasan tetrapak 200 ml.",
+      "status": "1",
+      "is_alfa_product": "0",
+      "price": "4000",
+      "product_special_price": "4000",
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": "4500",
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A6873110001116_20200728164945346_base.jpg"
+        ]
+      },
+      "alfagift_platform": "1",
+      "product_pickup_availability": "1",
+      "product_is_groceries": "0",
+      "product_visibility_pdp": 296,
+      "product_category": "2",
+      "product_sub_category": null,
+      "id": 14
     }
   ]
 }

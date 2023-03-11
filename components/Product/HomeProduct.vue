@@ -32,7 +32,7 @@
                     <b-icon style="width: 5vw; height: 5vh;" icon="plus-square-fill" variant="info"></b-icon>
                 </div>
 
-                <div style="display: flex; jusitfy-content: center; align-items: center; width: 100%"> <!-- row-cols-5 --> <!-- v-for="(p, index) in products" :key="index" -->
+                <div style="display: flex; jusitfy-content: center; align-items: center;"> <!-- row-cols-5 --> <!-- v-for="(p, index) in products" :key="index" -->
                     <div class="row mb-4">
                         <div v-for="(d, index) in dataProducts" :key="index" class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
                             <b-card bg-variant="light" :img-src="d.product_images.url[0]" img-alt="Image" img-top footer-tag="footer" style="cursor: pointer; max-width: 15rem; border-radius: 10px;" class="mb-2 mt-5">
