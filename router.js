@@ -9,6 +9,7 @@ const Users = () => interopDefault(import('~/pages/users.vue'))
 const Products = () => interopDefault(import('~/pages/product.vue'))
 const InputNewProduct = () => interopDefault(import('~/pages/inputNewProduct.vue'))
 const UpdateProduct = () => interopDefault(import('~/pages/updateProduct.vue'))
+const DetailProduct = () => interopDefault(import('~/pages/detailProduct.vue'))
 
 Vue.use(Router)
 
@@ -43,6 +44,11 @@ export function createRouter () {
                 path: '/products',
                 component: Products,
                 name: 'product'
+            },
+            {
+                path: '/products/detail/:id',
+                component: DetailProduct,
+                name: 'detailProduct'
             },
             {
                 path: '/products/addnew',

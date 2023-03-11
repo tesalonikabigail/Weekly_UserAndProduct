@@ -28,15 +28,15 @@
 
             <div class="container-fluid" style="width: 80%">
                 <div @click="toAddNewProduct" class="mt-2" style="cursor: pointer; display: flex; justify-content: right; align-items: right;">
-                    <p class="mt-2" style="color: #31A2CB;">Add New Product</p>
+                    <p class="mt-2 mr-1" style="color: #31A2CB;">Add New Product</p>
                     <b-icon style="width: 5vw; height: 5vh;" icon="plus-square-fill" variant="info"></b-icon>
                 </div>
 
                 <div style="display: flex; jusitfy-content: center; align-items: center;"> <!-- row-cols-5 --> <!-- v-for="(p, index) in products" :key="index" -->
                     <div class="row mb-4">
                         <div v-for="(d, index) in dataProducts" :key="index" class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
-                            <b-card bg-variant="light" :img-src="d.product_images.url[0]" img-alt="Image" img-top footer-tag="footer" style="cursor: pointer; max-width: 15rem; border-radius: 10px;" class="mb-2 mt-5">
-                                <p style="height: 4.5rem; font-family: 'Poppins', sans-serif; font-size: 15px">{{ d.product_name }}</p>
+                            <b-card bg-variant="light" :img-src="d.product_images.url[0]" img-alt="Image" img-top footer-tag="footer" style="max-width: 15rem; border-radius: 10px;" class="mb-2 mt-5">
+                                <p @click="toDetailProductData(d.id)" style="cursor: pointer; height: 4.5rem; font-family: 'Poppins', sans-serif; font-size: 15px">{{ d.product_name }}</p>
                                 <section v-if="d.product_special_price < d.price" style="height: 1rem">
                                     <b-card-text style="color: darkgrey; margin-bottom: 0px; font-size: 12px;"><del>{{ d.price | toRp }}</del></b-card-text>
                                 </section>
@@ -47,7 +47,7 @@
 
                                 <div class="row d-flex justify-content-center mb-auto">
                                     <!-- <b-button size="md" style="margin-right: 2%" variant="info"><b-icon icon="cart"></b-icon></b-button> -->
-                                    <b-button size="md" style="margin-right: 2%" variant="success" @click="toUpdateProductData(d.product_id)"><b-icon icon="pencil-square"></b-icon></b-button>           
+                                    <b-button size="md" style="margin-right: 2%" variant="success" @click="toUpdateProductData(d.id)"><b-icon icon="pencil-square"></b-icon></b-button>           
                                     <b-button size="md" variant="danger" @click="toDeleteProductData(d.id)"><b-icon icon="trash"></b-icon></b-button>   
                                 </div>
                             </b-card>
@@ -78,6 +78,10 @@
 
     const dataProducts = computed(() => $store.getters['products/fetchProduct']);
 
+    const toDetailProductData = (id) => {
+        router.push({ name:'detailProduct', params: { id: id } });
+    }
+
     const toAddNewProduct = () => {
         router.push({ name:'inputNewProduct' });
     }
@@ -101,14 +105,13 @@
         else
             cekDelete.value = false;
     }
-
-    const toUpdateProductData = (id) => {
-        router.push({ name:'updateProduct', params: { id: id } });
-    }
-
     const toDeleteProductData = async(id) => {
         activeID.value = id;
         cekDelete.value = true;
+    }
+
+    const toUpdateProductData = (id) => {
+        router.push({ name:'updateProduct', params: { id: id } });
     }
 
     onMounted(async () => {

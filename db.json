@@ -225,7 +225,7 @@
       "status": 1,
       "is_alfa_product": 1,
       "price": 25000,
-      "product_special_price": 23500,
+      "product_special_price": "21000",
       "product_special_price_to": "2023-03-17",
       "product_special_price_from": "2023-03-02",
       "product_alfagift_price": 24000,
@@ -237,7 +237,7 @@
       },
       "alfagift_platform": "1",
       "product_pickup_availability": 1,
-      "product_is_groceries": 1,
+      "product_is_groceries": "0",
       "product_visibility_pdp": 296,
       "product_category": "1",
       "product_sub_category": null

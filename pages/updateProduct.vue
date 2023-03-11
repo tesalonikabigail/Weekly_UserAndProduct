@@ -222,7 +222,7 @@
 </template>
 
 <script setup>
-    import { ref, getCurrentInstance, computed } from 'vue';
+    import { ref, getCurrentInstance, computed, onMounted } from 'vue';
     import NavbarUsersPage from '../components/NavbarUsersPage.vue';
     
     const $root = getCurrentInstance().proxy.$root;
@@ -235,7 +235,7 @@
     
     const dataProducts = computed(() => $store.getters['products/fetchProduct']);
     const ambilData = computed(() => {
-        const a = dataProducts?.value?.filter((item) => item.product_id == id.value) ?? {};
+        const a = dataProducts?.value?.filter((item) => item.id == id.value) ?? {};
         return (a.length > 0) ? a[0] : {};
     });
 
@@ -251,7 +251,7 @@
     const product_special_price_tos = ref(ambilData.value.product_special_price_to);
     const product_special_price_froms = ref(ambilData.value.product_special_price_from);
     const product_alfagift_prices = ref(ambilData.value.product_alfagift_price);
-    const product_imagess = ref(ambilData.value.product_images);
+    const product_imagess = ref(ambilData.value.product_images.url[0]);
     const alfagift_platforms = ref(ambilData.value.alfagift_platform);
     const product_pickup_availabilitys = ref(ambilData.value.product_pickup_availability);
     const product_is_groceriess = ref(ambilData.value.product_is_groceries);
@@ -270,6 +270,7 @@
         await $store.dispatch("products/updateProductData", {
             axiosInstance: $axios,
             val: {
+                id: id.value,
                 product_id: product_ids.value,
                 product_sku: product_skus.value,
                 product_name: product_names.value,
@@ -305,4 +306,12 @@
             dismissCountDown.value = -1;
     }
     const requestStatus = computed(() => $store.getters['products/updateStatus']);
+
+    onMounted(async () => {
+        notFinish.value = true;
+        await $store.dispatch('products/fetchProductData', {
+            axiosInstance: $axios
+        });
+        notFinish.value = false;
+    })
 </script>

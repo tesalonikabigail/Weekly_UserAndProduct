@@ -28,7 +28,7 @@ export const actions = ({
     },
     async updateProductData({ commit }, { axiosInstance, val }){
         try {
-            const res = await axiosInstance.$put(`${ API_URL_AUTH }/products/${ val.product_id }`, val);
+            const res = await axiosInstance.$put(`${ API_URL_AUTH }/products/${ val.id }`, val);
             commit('UPDATING_PRODUCT', res);
             commit('UPDATE_STATUS', true);
         } catch (err) {
@@ -56,7 +56,7 @@ export const mutations = ({
         state.inputStatus = data;
     },
     UPDATING_PRODUCT(state, data){
-        const idx = state.data.findIndex(item => item.product_id === data.product_id); // yg user => user.id, si "user" nya itu nama variable nya bebas 
+        const idx = state.data.findIndex(item => item.product_id === data.product_id); 
         
         state.data[idx].id = data.id;
         state.data[idx].product_id = data.product_id;
