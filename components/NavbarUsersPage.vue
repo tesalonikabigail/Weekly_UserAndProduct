@@ -1,6 +1,6 @@
 <template>
     <fragment>
-        <b-navbar fixed sticky toggleable style="background-color: lightblue;">
+        <b-navbar fixed sticky toggleable class="bg-light">
             <b-overlay :show="notFinish">
                 <div class="row">
                     <div class="col-lg-6 col-md-8 col-sm-6">

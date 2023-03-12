@@ -3,8 +3,8 @@
         <b-overlay :show="notFinish">
             <NavbarUsersPage />
 
-            <div style="width: 80%;">
-                <b-card no-body style="display: flex; justify-content: center; margin: auto; height: 80%">
+            <div class="mt-4 mb-4" style="width: 80%; height: 80%; display: flex; justify-content: center; margin: auto;">
+                <b-card no-body>
                     <b-tabs active-nav-item-class="font-weight-bold" pills card vertical>
                         <b-tab title="Product Details" title-link-class="bg-light text-info" active>
                             <b-card-text>
@@ -107,7 +107,80 @@
                             </b-card-text>
                         </b-tab>
 
-                        <b-tab title="Other Informations" title-link-class="bg-light text-info" ><b-card-text>Tab contents 3</b-card-text></b-tab>
+                        <b-tab title="Other Informations" title-link-class="bg-light text-info" >
+                            <b-card-text>
+                                <b-input-group class="mb-3">            
+                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Status</label>
+                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input v-if="statuss === 1" disabled class="shadow-none form-control" value="Active" style="border-radius: 0 10px 10px 0;"/>
+                                        <input v-else disabled class="shadow-none form-control" value="Inactive" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                </b-input-group>
+
+                                <b-input-group class="mb-3">            
+                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Alfamart Product</label>
+                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input v-if="is_alfa_products === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>
+                                        <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                </b-input-group>
+
+                                <b-input-group class="mb-3">            
+                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Exist in Alfagift Platform</label>
+                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input v-if="alfagift_platforms === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>                                
+                                        <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                </b-input-group>
+
+                                <b-input-group class="mb-3">            
+                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Is Product Pickup Available</label>
+                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input v-if="product_pickup_availabilitys === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>
+                                        <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                </b-input-group>
+
+                                <b-input-group class="mb-3">            
+                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Is Product Groceries</label>
+                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input v-if="product_is_groceriess === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>
+                                        <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                </b-input-group>
+
+                                <b-input-group class="mb-3">            
+                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Visibility PDP</label>
+                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input disabled class="shadow-none form-control" v-model="product_visibility_pdps" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                </b-input-group>
+
+                                <b-input-group class="mb-3">            
+                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Category</label>
+                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input v-if="product_categorys === '1'" disabled class="shadow-none form-control" value="Foods" style="border-radius: 0 10px 10px 0;"/>
+                                        <input v-else disabled class="shadow-none form-control" value="Beverages" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                </b-input-group>
+
+                                <b-input-group class="mb-3">            
+                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Sub Category</label>
+                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input v-if="product_sub_categorys" disabled class="shadow-none form-control" v-model="product_sub_categorys" style="border-radius: 0 10px 10px 0;"/>
+                                        <input v-else disabled class="shadow-none form-control" value="-" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                </b-input-group>
+                            </b-card-text>
+                        </b-tab>
                     </b-tabs>
                 </b-card>
             </div>

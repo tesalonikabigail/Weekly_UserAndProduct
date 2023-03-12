@@ -13,248 +13,206 @@
             <div class="mt-4 mb-4" style="width: 80%; justify-content: center; align-items: center; margin: auto">
                 <ValidationObserver ref="form" v-slot="{ invalid, validate }">
                     <b-form id="productForm" name="productForm" class="px-2" @submit.prevent="validate().then(onSubmit())">
-                        <ValidationProvider rules="required|numeric" v-slot="{ errors }">
-                            <b-input-group class="mb-3">            
-                                <label for="product_id" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product ID</label>
-                                <b-input-group-prepend class="w-100">
-                                    <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                    <input class="shadow-none form-control" v-model="product_id" name="product_id" id="product_id" style="border-radius: 0 10px 10px 0;"/>
-                                </b-input-group-prepend>
-                                <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
-                            </b-input-group>
-                        </ValidationProvider>
-
-                        <ValidationProvider rules="required|alpha_num" v-slot="{ errors }">
-                            <b-input-group class="mb-3">            
-                                <label for="product_sku" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product SKU</label>
-                                <b-input-group-prepend class="w-100">
-                                    <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                    <input class="shadow-none form-control" v-model="product_sku" name="product_sku" id="product_sku" style="border-radius: 0 10px 10px 0;"/>
-                                </b-input-group-prepend>
-                                <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
-                            </b-input-group>
-                        </ValidationProvider>
-
-                        <ValidationProvider rules="required" v-slot="{ errors }">
-                            <b-input-group class="mb-3">            
-                                <label for="product_name" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Name</label>
-                                <b-input-group-prepend class="w-100">
-                                    <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                    <input class="shadow-none form-control" v-model="product_name" name="product_name" id="product_name" style="border-radius: 0 10px 10px 0;"/>
-                                </b-input-group-prepend>
-                                <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
-                            </b-input-group>
-                        </ValidationProvider>
-
-                        <ValidationProvider rules="required|max:1000" v-slot="{ errors }">
-                            <b-input-group class="mb-3">            
-                                <label for="product_desc" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Description</label>
-                                <b-input-group-prepend class="w-100">
-                                    <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                    <textarea v-model="product_desc" id="product_desc" name="product_desc" style="border-radius: 0 10px 10px 0; width: 100%; outline-color: blue;"></textarea>
-                                </b-input-group-prepend>
-                                <span class="red" v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
-                            </b-input-group>
-                        </ValidationProvider>
-
-                        <ValidationProvider rules="required">
-                            <b-input-group class="mb-3">            
-                                <label for="product_sku" class="w-100" style="font-family: 'Lato', 'sans-serif';">Status</label>
-                                <b-input-group class="w-100 row">
-                                    <div class="col-6">
-                                        <input type="radio" id="sOne" value="1" v-model="status" />
-                                        <label for="sOne">Active</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input type="radio" id="sTwo" value="0" v-model="status" />
-                                        <label for="sTwo">Inactive</label>
-                                    </div>
-                                </b-input-group>
-                            </b-input-group>
-                        </ValidationProvider>
-
-                        <ValidationProvider rules="required">
-                            <b-input-group class="mb-3">            
-                                <label for="is_alfa_product" class="w-100" style="font-family: 'Lato', 'sans-serif';">Is Alfa Product</label>
-                                <b-input-group class="w-100 row">
-                                    <div class="col-6">
-                                        <input type="radio" id="sOne" value="1" v-model="is_alfa_product" />
-                                        <label for="sOne">Yes</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input type="radio" id="sTwo" value="0" v-model="is_alfa_product" />
-                                        <label for="sTwo">No</label>
-                                    </div>
-                                </b-input-group>
-                            </b-input-group>
-                        </ValidationProvider>
-
-                        <ValidationProvider rules="required|numeric" v-slot="{ errors }">
-                            <b-input-group class="mb-3">            
-                                <label for="price" class="w-100" style="font-family: 'Lato', 'sans-serif';">Price</label>
-                                <b-input-group-prepend class="w-100">
-                                    <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                    <input class="shadow-none form-control" v-model="price" name="price" id="price" style="border-radius: 0 10px 10px 0;"/>
-                                </b-input-group-prepend>
-                                <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
-                            </b-input-group>
-                        </ValidationProvider>
-
-                        <ValidationProvider rules="required|numeric" v-slot="{ errors }">
-                            <b-input-group class="mb-3">            
-                                <label for="product_special_price" class="w-100" style="font-family: 'Lato', 'sans-serif';">Price Special Price</label>
-                                <b-input-group-prepend class="w-100">
-                                    <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                    <input class="shadow-none form-control" v-model="product_special_price" name="product_special_price" id="product_special_price" style="border-radius: 0 10px 10px 0;"/>
-                                </b-input-group-prepend>
-                                <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
-                            </b-input-group>
-                        </ValidationProvider>
-
-                        <section v-if="product_special_price < price">
-                            <ValidationProvider rules="required" v-slot="{ errors }">
+                        <div class="row">
+                            <ValidationProvider class="col-lg-4 col-md-6 col-sm-12" rules="required|numeric" v-slot="{ errors }">
                                 <b-input-group class="mb-3">            
-                                    <label for="product_special_price_from" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
+                                    <label for="product_id" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product ID</label>
                                     <b-input-group-prepend class="w-100">
                                         <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input class="shadow-none form-control" v-model="product_special_price_from" name="product_special_price_from" id="product_special_price_from" type="date" style="border-radius: 0 10px 10px 0;"/>
+                                        <input class="shadow-none form-control" v-model="product_id" name="product_id" id="product_id" style="border-radius: 0 10px 10px 0;"/>
                                     </b-input-group-prepend>
                                     <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
                                 </b-input-group>
                             </ValidationProvider>
 
-                            <ValidationProvider rules="required" v-slot="{ errors }">
+                            <ValidationProvider class="col-lg-4 col-md-6 col-sm-12" rules="required|alpha_num" v-slot="{ errors }">
                                 <b-input-group class="mb-3">            
-                                    <label for="product_special_price_to" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount End Date</label>
+                                    <label for="product_sku" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product SKU</label>
                                     <b-input-group-prepend class="w-100">
                                         <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input class="shadow-none form-control" v-model="product_special_price_to" name="product_special_price_to" id="product_special_price_to" type="date" style="border-radius: 0 10px 10px 0;"/>
+                                        <input class="shadow-none form-control" v-model="product_sku" name="product_sku" id="product_sku" style="border-radius: 0 10px 10px 0;"/>
                                     </b-input-group-prepend>
                                     <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
                                 </b-input-group>
                             </ValidationProvider>
-                        </section>
-                        <section v-else>
-                            <ValidationProvider>
+
+                            <ValidationProvider class="col-lg-4 col-md-12 col-sm-12" rules="required" v-slot="{ errors }">
                                 <b-input-group class="mb-3">            
-                                    <label for="product_special_price_from" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
+                                    <label for="product_name" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Name</label>
                                     <b-input-group-prepend class="w-100">
                                         <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input class="shadow-none form-control" v-model="product_special_price_from" name="product_special_price_from" id="product_special_price_from" type="date" style="border-radius: 0 10px 10px 0;"/>
+                                        <input class="shadow-none form-control" v-model="product_name" name="product_name" id="product_name" style="border-radius: 0 10px 10px 0;"/>
                                     </b-input-group-prepend>
+                                    <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
                                 </b-input-group>
                             </ValidationProvider>
 
-                            <ValidationProvider>
+                            <ValidationProvider class="col-12" rules="required|url" v-slot="{ errors }">
                                 <b-input-group class="mb-3">            
-                                    <label for="product_special_price_to" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount End Date</label>
+                                    <label for="product_images" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Image (CDN)</label>
                                     <b-input-group-prepend class="w-100">
                                         <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input class="shadow-none form-control" v-model="product_special_price_to" name="product_special_price_to" id="product_special_price_to" type="date" style="border-radius: 0 10px 10px 0;"/>
+                                        <input class="shadow-none form-control" v-model="product_images" name="product_images" id="product_images" style="border-radius: 0 10px 10px 0;"/>
                                     </b-input-group-prepend>
+                                    <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
                                 </b-input-group>
                             </ValidationProvider>
-                        </section>
 
-                        <ValidationProvider rules="required|numeric" v-slot="{ errors }">
-                            <b-input-group class="mb-3">            
-                                <label for="product_alfagift_price" class="w-100" style="font-family: 'Lato', 'sans-serif';">Alfagift Price</label>
-                                <b-input-group-prepend class="w-100">
-                                    <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                    <input class="shadow-none form-control" v-model="product_alfagift_price" name="product_alfagift_price" id="product_alfagift_price" style="border-radius: 0 10px 10px 0;"/>
-                                </b-input-group-prepend>
-                                <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
-                            </b-input-group>
-                        </ValidationProvider>
-
-                        <ValidationProvider rules="required|url" v-slot="{ errors }">
-                            <b-input-group class="mb-3">            
-                                <label for="product_images" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Image (CDN)</label>
-                                <b-input-group-prepend class="w-100">
-                                    <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                    <input class="shadow-none form-control" v-model="product_images" name="product_images" id="product_images" style="border-radius: 0 10px 10px 0;"/>
-                                </b-input-group-prepend>
-                                <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
-                            </b-input-group>
-                        </ValidationProvider>
-
-                        <ValidationProvider rules="required">
-                            <b-input-group class="mb-3">            
-                                <label for="alfagift_platform" class="w-100" style="font-family: 'Lato', 'sans-serif';">Exist In Alfagift Platform</label>
-                                <b-input-group class="w-100 row">
-                                    <div class="col-6">
-                                        <input type="radio" id="sOne" value="1" v-model="alfagift_platform" />
-                                        <label for="sOne">Yes</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input type="radio" id="sTwo" value="0" v-model="alfagift_platform" />
-                                        <label for="sTwo">No</label>
-                                    </div>
+                            <ValidationProvider class="col-12" rules="required|max:1000" v-slot="{ errors }">
+                                <b-input-group class="mb-4">            
+                                    <label for="product_desc" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Description</label>
+                                    <b-input-group-prepend class="w-100">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <textarea rows="4" v-model="product_desc" id="product_desc" name="product_desc" style="border-radius: 0 10px 10px 0; width: 100%; outline-color: blue;"></textarea>
+                                    </b-input-group-prepend>
+                                    <span class="red" v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
                                 </b-input-group>
-                            </b-input-group>
-                        </ValidationProvider>
+                            </ValidationProvider>
 
-                        <ValidationProvider rules="required">
-                            <b-input-group class="mb-3">            
-                                <label for="product_pickup_availability" class="w-100" style="font-family: 'Lato', 'sans-serif';">Is Pickup Available</label>
-                                <b-input-group class="w-100 row">
-                                    <div class="col-6">
-                                        <input type="radio" id="sOne" value="1" v-model="product_pickup_availability" />
-                                        <label for="sOne">Yes</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input type="radio" id="sTwo" value="0" v-model="product_pickup_availability" />
-                                        <label for="sTwo">No</label>
-                                    </div>
+                            <ValidationProvider class="col-lg-4 col-md-4 col-sm-12" rules="required|numeric" v-slot="{ errors }">
+                                <b-input-group class="mb-3">            
+                                    <label for="price" class="w-100" style="font-family: 'Lato', 'sans-serif';">Price</label>
+                                    <b-input-group-prepend class="w-100">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input class="shadow-none form-control" v-model="price" name="price" id="price" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                    <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
                                 </b-input-group>
-                            </b-input-group>
-                        </ValidationProvider>
-                        
-                        <ValidationProvider rules="required">
-                            <b-input-group class="mb-3">            
-                                <label for="product_is_groceries" class="w-100" style="font-family: 'Lato', 'sans-serif';">Is Groceries</label>
-                                <b-input-group class="w-100 row">
-                                    <div class="col-6">
-                                        <input type="radio" id="sOne" value="1" v-model="product_is_groceries" />
-                                        <label for="sOne">Yes</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <input type="radio" id="sTwo" value="0" v-model="product_is_groceries" />
-                                        <label for="sTwo">No</label>
-                                    </div>
+                            </ValidationProvider>
+
+                            <ValidationProvider class="col-lg-4 col-md-4 col-sm-12"  rules="required|numeric" v-slot="{ errors }">
+                                <b-input-group class="mb-3">            
+                                    <label for="product_special_price" class="w-100" style="font-family: 'Lato', 'sans-serif';">Price Special Price</label>
+                                    <b-input-group-prepend class="w-100">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input class="shadow-none form-control" v-model="product_special_price" name="product_special_price" id="product_special_price" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                    <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
                                 </b-input-group>
-                            </b-input-group>
-                        </ValidationProvider>
-                        
-                        <input type="hidden" v-model="product_visibility_pdp" value="296" />
+                            </ValidationProvider>
 
-                        <ValidationProvider rules="required">
-                            <label for="product_category" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Category</label>
-                            <b-form-select v-model="product_category" :options="catOptions" style="box-shadow: none; border-radius: 10px"></b-form-select>
-                        </ValidationProvider>
+                            <ValidationProvider class="col-lg-4 col-md-4 col-sm-12"  rules="required|numeric" v-slot="{ errors }">
+                                <b-input-group class="mb-3">            
+                                    <label for="product_alfagift_price" class="w-100" style="font-family: 'Lato', 'sans-serif';">Alfagift Price</label>
+                                    <b-input-group-prepend class="w-100">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input class="shadow-none form-control" v-model="product_alfagift_price" name="product_alfagift_price" id="product_alfagift_price" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                    <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
+                                </b-input-group>
+                            </ValidationProvider>
 
-                        <!-- <input type="hidden" v-model="product_sub_category" value="null" /> -->
-                        
-                        <b-button v-if="!invalid" block type="submit" class="mt-3" variant="outline-info" style="border-radius: 10px; margin: auto">Submit New Product</b-button>
-                        <b-button v-else disabled block type="submit" class="mt-3" variant="outline-info" style="border-radius: 10px; margin: auto">Submit New Product</b-button>
+                            <section class="col-lg-6 col-md-6 col-sm-12" v-if="product_special_price < price">
+                                <ValidationProvider rules="required" v-slot="{ errors }">
+                                    <b-input-group class="mb-3">            
+                                        <label for="product_special_price_from" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
+                                        <b-input-group-prepend class="w-100">
+                                            <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                            <input class="shadow-none form-control" v-model="product_special_price_from" name="product_special_price_from" id="product_special_price_from" type="date" style="border-radius: 0 10px 10px 0;"/>
+                                        </b-input-group-prepend>
+                                        <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
+                                    </b-input-group>
+                                </ValidationProvider>
+
+                                <ValidationProvider rules="required" v-slot="{ errors }">
+                                    <b-input-group class="mb-3">            
+                                        <label for="product_special_price_to" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount End Date</label>
+                                        <b-input-group-prepend class="w-100">
+                                            <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                            <input class="shadow-none form-control" v-model="product_special_price_to" name="product_special_price_to" id="product_special_price_to" type="date" style="border-radius: 0 10px 10px 0;"/>
+                                        </b-input-group-prepend>
+                                        <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
+                                    </b-input-group>
+                                </ValidationProvider>
+                            </section>
+                            <section class="col-lg-6 col-md-6 col-sm-12" v-else>
+                                <ValidationProvider>
+                                    <b-input-group class="mb-3">            
+                                        <label for="product_special_price_from" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
+                                        <b-input-group-prepend class="w-100">
+                                            <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                            <input class="shadow-none form-control" v-model="product_special_price_from" name="product_special_price_from" id="product_special_price_from" type="date" style="border-radius: 0 10px 10px 0;"/>
+                                        </b-input-group-prepend>
+                                    </b-input-group>
+                                </ValidationProvider>
+
+                                <ValidationProvider>
+                                    <b-input-group class="mb-3">            
+                                        <label for="product_special_price_to" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount End Date</label>
+                                        <b-input-group-prepend class="w-100">
+                                            <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                            <input class="shadow-none form-control" v-model="product_special_price_to" name="product_special_price_to" id="product_special_price_to" type="date" style="border-radius: 0 10px 10px 0;"/>
+                                        </b-input-group-prepend>
+                                    </b-input-group>
+                                </ValidationProvider>
+                            </section>
+                            
+                            <section class="col-lg-6 col-md-6 col-sm-12">
+                                <ValidationProvider rules="required">
+                                    <b-input-group class="mb-3">   
+                                        <label for="product_category" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Category</label>
+                                        <b-form-select v-model="product_category" :options="catOptions" style="box-shadow: none; border-radius: 10px"></b-form-select>
+                                    </b-input-group>
+                                </ValidationProvider>
+
+                                <ValidationProvider rules="required">
+                                    <b-input-group class="mb-3">   
+                                        <label for="product_category" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Sub Category</label>
+                                        <b-form-select disabled v-model="product_category" :options="catOptions" style="box-shadow: none; border-radius: 10px"></b-form-select>
+                                    </b-input-group>
+                                </ValidationProvider>
+                            </section>
+                            
+                            <ValidationProvider class="col-lg-2 col-md-3 col-sm-6" rules="required">
+                                <b-input-group class="mb-3">   
+                                    <b-form-group label="Status" class="w-100" style="font-family: 'Lato', 'sans-serif';">
+                                        <b-form-radio-group v-model="status" :options="statusOptions" :aria-describedby="ariaDescribedby" name="radios-stacked" stacked></b-form-radio-group>
+                                    </b-form-group>
+                                </b-input-group>
+                            </ValidationProvider>
+                            
+                            <ValidationProvider class="col-lg-2 col-md-3 col-sm-6" rules="required">
+                                <b-input-group class="mb-3">   
+                                    <b-form-group label="Alfa Product" class="w-100" style="font-family: 'Lato', 'sans-serif';">
+                                        <b-form-radio-group v-model="is_alfa_product" :options="ynOptions" :aria-describedby="ariaDescribedby" name="radios-stacked" stacked></b-form-radio-group>
+                                    </b-form-group>
+                                </b-input-group>
+                            </ValidationProvider>
+                            
+                            <ValidationProvider class="col-lg-2 col-md-3 col-sm-6" rules="required">
+                                <b-input-group class="mb-3">   
+                                    <b-form-group label="Exists In Alfagift" class="w-100" style="font-family: 'Lato', 'sans-serif';">
+                                        <b-form-radio-group v-model="alfagift_platform" :options="ynOptions" :aria-describedby="ariaDescribedby" name="radios-stacked" stacked></b-form-radio-group>
+                                    </b-form-group>
+                                </b-input-group>
+                            </ValidationProvider>
+                            
+                            <ValidationProvider class="col-lg-2 col-md-3 col-sm-6" rules="required">
+                                <b-input-group class="mb-3">   
+                                    <b-form-group label="Pickup Availability" class="w-100" style="font-family: 'Lato', 'sans-serif';">
+                                        <b-form-radio-group v-model="product_pickup_availability" :options="ynOptions" :aria-describedby="ariaDescribedby" name="radios-stacked" stacked></b-form-radio-group>
+                                    </b-form-group>
+                                </b-input-group>
+                            </ValidationProvider>
+                            
+                            <ValidationProvider class="col-lg-2 col-md-3 col-sm-6" rules="required">
+                                <b-input-group class="mb-3">   
+                                    <b-form-group label="Is Groceries" class="w-100" style="font-family: 'Lato', 'sans-serif';">
+                                        <b-form-radio-group v-model="product_is_groceries" :options="ynOptions" :aria-describedby="ariaDescribedby" name="radios-stacked" stacked></b-form-radio-group>
+                                    </b-form-group>
+                                </b-input-group>
+                            </ValidationProvider>
+                            
+                            <input type="hidden" v-model="product_visibility_pdp" value="296" />
+
+                            <!-- <input type="hidden" v-model="product_sub_category" value="null" /> -->
+                            
+                            <b-button v-if="!invalid" block type="submit" class="mt-3" variant="outline-info" style="border-radius: 10px; margin: auto">Submit New Product</b-button>
+                            <b-button v-else disabled block type="submit" class="mt-3" variant="outline-info" style="border-radius: 10px; margin: auto">Submit New Product</b-button>
+                        </div>
                     </b-form>
                 </ValidationObserver>
             </div>
-
-                <!-- <ValidationObserver ref="form" v-slot="{ validate }"> <-- invalid --
-                    <b-form name="form" @submit.prevent="validate().then(onSubmit2())">
-                        <ValidationProvider rules="required" v-slot="{ errors }">
-                            <b-form-group class='form-group'>
-                                <label for="product_id">Product ID</label>
-                            </b-form-group>
-                            <b-form-input id="product_id" v-model="product_id">
-                            </b-form-input>
-                            <span v-if="errors && errors.length > 0">
-                                {{ errors[0] }}
-                            </span>
-                        </ValidationProvider>
-                    </b-form>
-                </ValidationObserver> -->
         </b-overlay>
     </fragment>
 </template>
@@ -287,6 +245,16 @@
         { value: null, text: 'Choose Product Category' },
         { value: '1', text: 'Foods' },
         { value: '2', text: 'Beverages' }
+    ])
+
+    const statusOptions = ref([
+        { text: 'Active', value: '1' },
+        { text: 'Inactive', value: '0' }
+    ])
+
+    const ynOptions = ref([
+          { text: 'Yes', value: '1' },
+          { text: 'No', value: '0' }
     ])
 
     const notFinish = ref(false);
@@ -340,3 +308,21 @@
     }
     const requestStatus = computed(() => $store.getters['regis/status']);
 </script>
+
+<!-- 
+    <ValidationProvider rules="required">
+        <b-input-group class="mb-3">            
+            <label for="product_is_groceries" class="w-100" style="font-family: 'Lato', 'sans-serif';">Is Groceries</label>
+            <b-input-group class="w-100 row">
+                <div class="col-6">
+                    <input type="radio" id="sOne" value="1" v-model="product_is_groceries" />
+                    <label for="sOne">Yes</label>
+                </div>
+                <div class="col-6">
+                    <input type="radio" id="sTwo" value="0" v-model="product_is_groceries" />
+                    <label for="sTwo">No</label>
+                </div>
+            </b-input-group>
+        </b-input-group>
+    </ValidationProvider>
+-->

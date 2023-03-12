@@ -8,13 +8,6 @@
                 <Alert :aType="2"/>
             </section>
 
-            <!-- <b-modal class="font-title" v-model="cek" hide-footer no-close-on-backdrop>
-                <template #modal-header="{ close }">
-                    <b-button id="btnClose" size="sm" variant="outline-danger" @click="hideModal">Close</b-button>
-                </template>
-                <ProductDetail v-if="ambilData" :prodData="ambilData"/>
-            </b-modal> -->
-
             <b-modal class="font-title" v-model="cekDelete" hide-footer no-close-on-backdrop>
                 <template #modal-header="{ close }">
                     <h4 style="color: grey">Confirm Deletion Data</h4>
@@ -27,10 +20,21 @@
             </b-modal>
 
             <div class="container-fluid" style="width: 80%">
-                <div @click="toAddNewProduct" class="mt-2" style="cursor: pointer; display: flex; justify-content: right; align-items: right;">
-                    <p class="mt-2 mr-1" style="color: #31A2CB;">Add New Product</p>
-                    <b-icon style="width: 5vw; height: 5vh;" icon="plus-square-fill" variant="info"></b-icon>
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12 navbar navbar-light">
+                        <form class="form-inline">
+                            <div class="col-12">
+                                <input class="shadow-none form-control mr-sm-2 col-lg-10 col-md-8 col-sm-8" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-info my-2 my-sm-0 col-lg-2 col-md-2 col-sm-2" type="submit"><b-icon icon="search"></b-icon></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-md-4 col-sm-12 mt-2" @click="toAddNewProduct" style="cursor: pointer; display: flex; justify-content: right; align-items: right;">
+                        <p class="mt-2 mr-1" style="color: #31A2CB;">Add New Product</p>
+                        <b-icon style="width: 5vw; height: 5vh;" icon="plus-square-fill" variant="info"></b-icon>
+                    </div>
                 </div>
+                    
 
                 <div style="display: flex; jusitfy-content: center; align-items: center;"> <!-- row-cols-5 --> <!-- v-for="(p, index) in products" :key="index" -->
                     <div class="row mb-4">
@@ -47,8 +51,8 @@
 
                                 <div class="row d-flex justify-content-center mb-auto">
                                     <!-- <b-button size="md" style="margin-right: 2%" variant="info"><b-icon icon="cart"></b-icon></b-button> -->
-                                    <b-button size="md" style="margin-right: 2%" variant="success" @click="toUpdateProductData(d.id)"><b-icon icon="pencil-square"></b-icon></b-button>           
-                                    <b-button size="md" variant="danger" @click="toDeleteProductData(d.id)"><b-icon icon="trash"></b-icon></b-button>   
+                                    <b-button size="md col-4" style="margin-right: 2%" variant="outline-info" @click="toUpdateProductData(d.id)"><b-icon icon="pencil-square"></b-icon></b-button>           
+                                    <b-button size="md col-4" variant="outline-danger" @click="toDeleteProductData(d.id)"><b-icon icon="trash"></b-icon></b-button>   
                                 </div>
                             </b-card>
                         </div>
@@ -63,7 +67,6 @@
     import NavbarUsersPage from '~/components/NavbarUsersPage.vue';
     import ProductCarousel from './ProductCarousel.vue';
     import Alert from '~/components/Alert.vue';
-    import ProductDetail from './ProductDetail.vue';
     import { ref, computed, getCurrentInstance, onMounted } from "vue";
 
     const $root = getCurrentInstance().proxy.$root;
