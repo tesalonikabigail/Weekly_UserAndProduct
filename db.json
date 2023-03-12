@@ -148,8 +148,8 @@
       "is_alfa_product": 1,
       "price": 25000,
       "product_special_price": 25000,
-      "product_special_price_to": "2023-03-20",
-      "product_special_price_from": "2023-03-10",
+      "product_special_price_to": "",
+      "product_special_price_from": "",
       "product_alfagift_price": 26000,
       "product_images": {
         "type": "Base Image",
@@ -381,9 +381,9 @@
       "status": 1,
       "is_alfa_product": 1,
       "price": 25000,
-      "product_special_price": 23500,
-      "product_special_price_to": "2023-03-28",
-      "product_special_price_from": "2023-03-14",
+      "product_special_price": "25000",
+      "product_special_price_to": "",
+      "product_special_price_from": "",
       "product_alfagift_price": 24000,
       "product_images": {
         "type": "Base Image",
