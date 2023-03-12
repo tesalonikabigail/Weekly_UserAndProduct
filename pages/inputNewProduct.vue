@@ -36,7 +36,7 @@
                                 </b-input-group>
                             </ValidationProvider>
 
-                            <ValidationProvider class="col-lg-4 col-md-12 col-sm-12" rules="required" v-slot="{ errors }">
+                            <ValidationProvider class="col-lg-4 col-md-12 col-sm-12" rules="required|min:5|max:100" v-slot="{ errors }">
                                 <b-input-group class="mb-3">            
                                     <label for="product_name" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Name</label>
                                     <b-input-group-prepend class="w-100">
@@ -58,7 +58,7 @@
                                 </b-input-group>
                             </ValidationProvider>
 
-                            <ValidationProvider class="col-12" rules="required|max:1000" v-slot="{ errors }">
+                            <ValidationProvider class="col-12" rules="required|min:250|max:1000" v-slot="{ errors }">
                                 <b-input-group class="mb-4">            
                                     <label for="product_desc" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Description</label>
                                     <b-input-group-prepend class="w-100">
@@ -80,7 +80,7 @@
                                 </b-input-group>
                             </ValidationProvider>
 
-                            <ValidationProvider class="col-lg-4 col-md-4 col-sm-12"  rules="required|numeric" v-slot="{ errors }">
+                            <ValidationProvider class="col-lg-4 col-md-4 col-sm-12" rules="required|numeric" v-slot="{ errors }">
                                 <b-input-group class="mb-3">            
                                     <label for="product_special_price" class="w-100" style="font-family: 'Lato', 'sans-serif';">Price Special Price</label>
                                     <b-input-group-prepend class="w-100">
@@ -91,7 +91,7 @@
                                 </b-input-group>
                             </ValidationProvider>
 
-                            <ValidationProvider class="col-lg-4 col-md-4 col-sm-12"  rules="required|numeric" v-slot="{ errors }">
+                            <ValidationProvider class="col-lg-4 col-md-4 col-sm-12" rules="required|numeric" v-slot="{ errors }">
                                 <b-input-group class="mb-3">            
                                     <label for="product_alfagift_price" class="w-100" style="font-family: 'Lato', 'sans-serif';">Alfagift Price</label>
                                     <b-input-group-prepend class="w-100">
@@ -157,48 +157,50 @@
 
                                 <ValidationProvider rules="required">
                                     <b-input-group class="mb-3">   
-                                        <label for="product_category" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Sub Category</label>
-                                        <b-form-select disabled v-model="product_category" :options="catOptions" style="box-shadow: none; border-radius: 10px"></b-form-select>
+                                        <label for="product_sub_category" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Sub Category</label>
+                                        <b-form-select v-if="temp === '1'" v-model="product_sub_category" :options="subCatOptions1" style="box-shadow: none; border-radius: 10px"></b-form-select>
+                                        <b-form-select v-else-if="temp === '2'" v-model="product_sub_category" :options="subCatOptions2" style="box-shadow: none; border-radius: 10px"></b-form-select>
+                                        <b-form-select v-else disabled v-model="product_sub_category" :options="subCatOptions2" style="box-shadow: none; border-radius: 10px"></b-form-select>
                                     </b-input-group>
                                 </ValidationProvider>
                             </section>
                             
                             <ValidationProvider class="col-lg-2 col-md-3 col-sm-6" rules="required">
                                 <b-input-group class="mb-3">   
-                                    <b-form-group label="Status" class="w-100" style="font-family: 'Lato', 'sans-serif';">
-                                        <b-form-radio-group v-model="status" :options="statusOptions" :aria-describedby="ariaDescribedby" name="radios-stacked" stacked></b-form-radio-group>
+                                    <b-form-group for="status" label="Status" class="w-100" style="font-family: 'Lato', 'sans-serif';">
+                                        <b-form-radio-group v-model="status" :options="statusOptions" :aria-describedby="status" id="status" name="status" stacked></b-form-radio-group>
                                     </b-form-group>
                                 </b-input-group>
                             </ValidationProvider>
                             
                             <ValidationProvider class="col-lg-2 col-md-3 col-sm-6" rules="required">
                                 <b-input-group class="mb-3">   
-                                    <b-form-group label="Alfa Product" class="w-100" style="font-family: 'Lato', 'sans-serif';">
-                                        <b-form-radio-group v-model="is_alfa_product" :options="ynOptions" :aria-describedby="ariaDescribedby" name="radios-stacked" stacked></b-form-radio-group>
+                                    <b-form-group for="is_alfa_product" label="Alfa Product" class="w-100" style="font-family: 'Lato', 'sans-serif';">
+                                        <b-form-radio-group v-model="is_alfa_product" :options="ynOptions" :aria-describedby="is_alfa_product" id="is_alfa_product" name="is_alfa_product" stacked></b-form-radio-group>
                                     </b-form-group>
                                 </b-input-group>
                             </ValidationProvider>
                             
                             <ValidationProvider class="col-lg-2 col-md-3 col-sm-6" rules="required">
                                 <b-input-group class="mb-3">   
-                                    <b-form-group label="Exists In Alfagift" class="w-100" style="font-family: 'Lato', 'sans-serif';">
-                                        <b-form-radio-group v-model="alfagift_platform" :options="ynOptions" :aria-describedby="ariaDescribedby" name="radios-stacked" stacked></b-form-radio-group>
+                                    <b-form-group for="alfagift_platform" label="Exists In Alfagift" class="w-100" style="font-family: 'Lato', 'sans-serif';">
+                                        <b-form-radio-group v-model="alfagift_platform" :options="ynOptions" :aria-describedby="alfagift_platform" id="alfagift_platform" name="alfagift_platform" stacked></b-form-radio-group>
                                     </b-form-group>
                                 </b-input-group>
                             </ValidationProvider>
                             
                             <ValidationProvider class="col-lg-2 col-md-3 col-sm-6" rules="required">
                                 <b-input-group class="mb-3">   
-                                    <b-form-group label="Pickup Availability" class="w-100" style="font-family: 'Lato', 'sans-serif';">
-                                        <b-form-radio-group v-model="product_pickup_availability" :options="ynOptions" :aria-describedby="ariaDescribedby" name="radios-stacked" stacked></b-form-radio-group>
+                                    <b-form-group for="product_pickup_availability" label="Pickup Availability" class="w-100" style="font-family: 'Lato', 'sans-serif';">
+                                        <b-form-radio-group v-model="product_pickup_availability" :options="ynOptions" :aria-describedby="product_pickup_availability" id="product_pickup_availability" name="product_pickup_availability" stacked></b-form-radio-group>
                                     </b-form-group>
                                 </b-input-group>
                             </ValidationProvider>
                             
                             <ValidationProvider class="col-lg-2 col-md-3 col-sm-6" rules="required">
                                 <b-input-group class="mb-3">   
-                                    <b-form-group label="Is Groceries" class="w-100" style="font-family: 'Lato', 'sans-serif';">
-                                        <b-form-radio-group v-model="product_is_groceries" :options="ynOptions" :aria-describedby="ariaDescribedby" name="radios-stacked" stacked></b-form-radio-group>
+                                    <b-form-group for="product_is_groceries" label="Is Groceries" class="w-100" style="font-family: 'Lato', 'sans-serif';">
+                                        <b-form-radio-group v-model="product_is_groceries" :options="ynOptions" :aria-describedby="product_is_groceries" id="product_is_groceries" name="product_is_groceries" stacked></b-form-radio-group>
                                     </b-form-group>
                                 </b-input-group>
                             </ValidationProvider>
@@ -219,7 +221,7 @@
 
 <script setup>
     import NavbarUsersPage from "../components/NavbarUsersPage.vue";
-    import { ref, getCurrentInstance, computed } from "vue";
+    import { ref, getCurrentInstance, computed, watch } from "vue";
     import Alert from "../components/Alert.vue";
 
     const product_id = ref("");
@@ -240,11 +242,24 @@
     const product_visibility_pdp = ref("");
     const product_category = ref(null);
     const product_sub_category = ref(null);
+    const temp = ref("");
 
     const catOptions = ref([
         { value: null, text: 'Choose Product Category' },
         { value: '1', text: 'Foods' },
         { value: '2', text: 'Beverages' }
+    ])
+
+    const subCatOptions1 = ref([
+        { value: null, text: 'Choose Product Sub Category' },
+        { value: '1', text: 'Ready Meals' },
+        { value: '2', text: 'Snacks' }
+    ])
+    const subCatOptions2 = ref([
+        { value: null, text: 'Choose Product Sub Category' },
+        { value: '3', text: 'Milk/ Yogurt' },
+        { value: '4', text: 'Coffee/ Tea' },
+        { value: '5', text: 'Energy Booster' }
     ])
 
     const statusOptions = ref([
@@ -266,8 +281,12 @@
     const router = getCurrentInstance().proxy.$router;
 
     const onSubmit = async (e) => {
+        if(product_special_price.value >= price.value){
+            product_special_price_from.value = "";
+            product_special_price_to.value = "";
+        }
+        
         notFinish.value = true;
-
         await $store.dispatch("products/addProductData", { 
             axiosInstance: $axios,
             val: {
@@ -307,6 +326,13 @@
             dismissCountDown.value = -1;
     }
     const requestStatus = computed(() => $store.getters['regis/status']);
+
+    watch(product_category, (val) => {
+        if(val === "1")
+            temp.value = "1";
+        else if(val === "2")
+            temp.value = "2";
+    })
 </script>
 
 <!-- 

@@ -3,7 +3,10 @@
         <b-overlay :show="notFinish">
             <NavbarUsersPage />
 
-            <div class="mt-4 mb-4" style="width: 80%; height: 80%; display: flex; justify-content: center; margin: auto;">
+            <div class="mt-4 mx-auto" style="width: 80%; height: 80%; display: flex; justify-content: left;">
+                <button @click="toPrev" class="mb-2 btn btn-info"><b-icon icon="arrow-left-short" class="mr-1 ml-0"></b-icon>Back</button>
+            </div>
+            <div class="mb-4 mx-auto" style="width: 80%; height: 80%; justify-content: center;">
                 <b-card no-body>
                     <b-tabs active-nav-item-class="font-weight-bold" pills card vertical>
                         <b-tab title="Product Details" title-link-class="bg-light text-info" active>
@@ -11,25 +14,12 @@
                                 <!-- product_images, product_id, product_sku, product_name, product_desc -->
                                 <!-- price, product_special_price, product_special_price_to, product_special_price_from, product_alfagift_price -->
                                 <!-- status, is_alfa_product, alfagift_platform, product_pickup_availability, product_is_groceries, product_visibility_pdp, product_category, product_sub_category -->
-                                <!-- <div class="row">
-                                    <div class="col-6">
-                                        <img class="img-fluid" :src="product_imagess"/>
-                                    </div>
-                                    <div class="col-6">
-                                        <ul>
-                                            <li>{{ product_ids }}</li>
-                                            <li>{{ product_skus }}</li>
-                                            <li>{{ product_names }}</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <p>{{ product_descs }}</p> -->
                                 
                                 <!-- <slot name="product_details" :img="product_imagess" :pID="product_ids" :pSKU="product_skus" :pName="product_names" :pDesc="product_descs"></slot> -->
                                 
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6">
-                                        <img class="img-fluid" style="display: flex; justify-content: center; align-items: center" :src="product_imagess"/>
+                                        <img class="img-fluid" style="display: flex; justify-content: center; align-items: center; margin: auto" :src="product_imagess"/>
                                     </div>
                                     <div class="col-lg-8 col-md-6 my-auto mx-auto">
                                         <b-input-group class="mb-3">            
@@ -63,122 +53,137 @@
                         
                         <b-tab title="Product Prices" title-link-class="bg-light text-info" >
                             <b-card-text>
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Price</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input disabled class="shadow-none form-control" v-model="prices" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Price</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input disabled class="shadow-none form-control" v-model="prices" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Special Price</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input disabled class="shadow-none form-control" v-model="product_special_prices" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Alfagift Price</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input disabled class="shadow-none form-control" v-model="product_alfagift_prices" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input v-if="product_special_price_froms" disabled class="shadow-none form-control" v-model="product_special_price_froms" style="border-radius: 0 10px 10px 0;"/>                                
-                                        <input v-else disabled class="shadow-none form-control" value="No Ongoing Discount" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Special Price</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input disabled class="shadow-none form-control" v-model="product_special_prices" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
+                                    </div>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Discount End Date</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input v-if="product_special_price_tos" disabled class="shadow-none form-control" v-model="product_special_price_tos" style="border-radius: 0 10px 10px 0;"/>
-                                        <input v-else disabled class="shadow-none form-control" value="No Ongoing Discount" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                    <div class="col-6">
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input v-if="product_special_price_froms" disabled class="shadow-none form-control" v-model="product_special_price_froms" style="border-radius: 0 10px 10px 0;"/>                                
+                                                <input v-else disabled class="shadow-none form-control" value="No Ongoing Discount" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Alfagift Price</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input disabled class="shadow-none form-control" v-model="product_alfagift_prices" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Discount End Date</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input v-if="product_special_price_tos" disabled class="shadow-none form-control" v-model="product_special_price_tos" style="border-radius: 0 10px 10px 0;"/>
+                                                <input v-else disabled class="shadow-none form-control" value="No Ongoing Discount" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
+                                    </div>
+                                </div>
                             </b-card-text>
                         </b-tab>
 
-                        <b-tab title="Other Informations" title-link-class="bg-light text-info" >
+                        <b-tab title="Other Informations" title-link-class="bg-light text-info">
                             <b-card-text>
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Status</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input v-if="statuss === 1" disabled class="shadow-none form-control" value="Active" style="border-radius: 0 10px 10px 0;"/>
-                                        <input v-else disabled class="shadow-none form-control" value="Inactive" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Status</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input v-if="statuss === 1" disabled class="shadow-none form-control" value="Active" style="border-radius: 0 10px 10px 0;"/>
+                                                <input v-else disabled class="shadow-none form-control" value="Inactive" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Alfamart Product</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input v-if="is_alfa_products === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>
-                                        <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Alfamart Product</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input v-if="is_alfa_products === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>
+                                                <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Exist in Alfagift Platform</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input v-if="alfagift_platforms === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>                                
-                                        <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Exist in Alfagift Platform</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input v-if="alfagift_platforms === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>                                
+                                                <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Is Product Pickup Available</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input v-if="product_pickup_availabilitys === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>
-                                        <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Is Product Pickup Available</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input v-if="product_pickup_availabilitys === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>
+                                                <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
+                                    </div>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Is Product Groceries</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input v-if="product_is_groceriess === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>
-                                        <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                    <div class="col-lg-6">
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Is Product Groceries</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input v-if="product_is_groceriess === 1" disabled class="shadow-none form-control" value="Yes" style="border-radius: 0 10px 10px 0;"/>
+                                                <input v-else disabled class="shadow-none form-control" value="No" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Visibility PDP</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input disabled class="shadow-none form-control" v-model="product_visibility_pdps" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Visibility PDP</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input disabled class="shadow-none form-control" v-model="product_visibility_pdps" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Category</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input v-if="product_categorys === '1'" disabled class="shadow-none form-control" value="Foods" style="border-radius: 0 10px 10px 0;"/>
-                                        <input v-else disabled class="shadow-none form-control" value="Beverages" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Category</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input v-if="product_categorys === '1'" disabled class="shadow-none form-control" value="Foods" style="border-radius: 0 10px 10px 0;"/>
+                                                <input v-else disabled class="shadow-none form-control" value="Beverages" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
 
-                                <b-input-group class="mb-3">            
-                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Sub Category</label>
-                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                        <input v-if="product_sub_categorys" disabled class="shadow-none form-control" v-model="product_sub_categorys" style="border-radius: 0 10px 10px 0;"/>
-                                        <input v-else disabled class="shadow-none form-control" value="-" style="border-radius: 0 10px 10px 0;"/>
-                                    </b-input-group-prepend>
-                                </b-input-group>
+                                        <b-input-group class="mb-3">            
+                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Sub Category</label>
+                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                <input v-if="product_sub_categorys === '1'" disabled class="shadow-none form-control" value="Ready Meals" style="border-radius: 0 10px 10px 0;"/>
+                                                <input v-if="product_sub_categorys === '2'" disabled class="shadow-none form-control" value="Snacks" style="border-radius: 0 10px 10px 0;"/>
+                                                <input v-if="product_sub_categorys === '3'" disabled class="shadow-none form-control" value="Milk/ Yogurt" style="border-radius: 0 10px 10px 0;"/>
+                                                <input v-if="product_sub_categorys === '4'" disabled class="shadow-none form-control" value="Coffee/ Tea" style="border-radius: 0 10px 10px 0;"/>
+                                                <input v-if="product_sub_categorys === '5'" disabled class="shadow-none form-control" value="Energy Booster" style="border-radius: 0 10px 10px 0;"/>
+                                            </b-input-group-prepend>
+                                        </b-input-group>
+                                    </div>
+                                </div>
                             </b-card-text>
                         </b-tab>
                     </b-tabs>
@@ -233,4 +238,8 @@
         });
         notFinish.value = false;
     })
+
+    const toPrev = () => {
+        router.push({ name: 'product' });
+    }
 </script>

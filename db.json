@@ -162,7 +162,7 @@
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
       "product_category": "1",
-      "product_sub_category": null
+      "product_sub_category": "1"
     },
     {
       "id": 2,
@@ -188,7 +188,7 @@
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
       "product_category": "1",
-      "product_sub_category": null
+      "product_sub_category": "1"
     },
     {
       "id": 3,
@@ -214,7 +214,7 @@
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
       "product_category": "1",
-      "product_sub_category": null
+      "product_sub_category": "1"
     },
     {
       "id": 4,
@@ -240,7 +240,7 @@
       "product_is_groceries": "0",
       "product_visibility_pdp": 296,
       "product_category": "1",
-      "product_sub_category": null
+      "product_sub_category": "1"
     },
     {
       "id": 5,
@@ -266,7 +266,7 @@
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
       "product_category": "1",
-      "product_sub_category": null
+      "product_sub_category": "1"
     },
     {
       "id": 6,
@@ -292,7 +292,7 @@
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
       "product_category": "1",
-      "product_sub_category": null
+      "product_sub_category": "1"
     },
     {
       "id": 7,
@@ -318,7 +318,7 @@
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
       "product_category": "1",
-      "product_sub_category": null
+      "product_sub_category": "1"
     },
     {
       "id": 8,
@@ -344,7 +344,7 @@
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
       "product_category": "1",
-      "product_sub_category": null
+      "product_sub_category": "1"
     },
     {
       "id": 9,
@@ -370,7 +370,7 @@
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
       "product_category": "1",
-      "product_sub_category": null
+      "product_sub_category": "1"
     },
     {
       "id": 10,
@@ -396,7 +396,7 @@
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
       "product_category": "1",
-      "product_sub_category": null
+      "product_sub_category": "1"
     },
     {
       "product_id": "56291",
@@ -421,7 +421,7 @@
       "product_is_groceries": "1",
       "product_visibility_pdp": 296,
       "product_category": "2",
-      "product_sub_category": null,
+      "product_sub_category": "3",
       "id": 11
     },
     {
@@ -447,7 +447,7 @@
       "product_is_groceries": "0",
       "product_visibility_pdp": 296,
       "product_category": "2",
-      "product_sub_category": null,
+      "product_sub_category": "5",
       "id": 12
     },
     {
@@ -473,7 +473,7 @@
       "product_is_groceries": "0",
       "product_visibility_pdp": 296,
       "product_category": "2",
-      "product_sub_category": null,
+      "product_sub_category": "5",
       "id": 13
     },
     {
@@ -499,8 +499,60 @@
       "product_is_groceries": "0",
       "product_visibility_pdp": 296,
       "product_category": "2",
-      "product_sub_category": null,
+      "product_sub_category": "4",
       "id": 14
+    },
+    {
+      "product_id": "56295",
+      "product_sku": "A06790303632",
+      "product_name": "Cimory Yogurt Drink Original 240 ml",
+      "product_desc": "Cimory Yogurt Drink Original 240 ml adalah minuman yogurt dengan cita rasa plain yang terbuat dari susu fermentasi yang asli dan terjamin keasliannya. Kaya akan vitamin yang baik untuk kesehatan. Akan semakin nikmat jika dinikmati dalam keadaan dingin. Tersedia dalam kemasan botol PET 240 ml.",
+      "status": "1",
+      "is_alfa_product": "1",
+      "price": "8900",
+      "product_special_price": "8900",
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": "9500",
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A6880800001089_20210319113055692_base.jpg"
+        ]
+      },
+      "alfagift_platform": "1",
+      "product_pickup_availability": "0",
+      "product_is_groceries": "0",
+      "product_visibility_pdp": 296,
+      "product_category": "2",
+      "product_sub_category": "3",
+      "id": 15
+    },
+    {
+      "product_id": "56296",
+      "product_sku": "A06790303633",
+      "product_name": "ULTRA MILK Susu UHT Low Fat Cokelat 250 ml",
+      "product_desc": "ULTRA MILK Susu UHT Low Fat Cokelat 250 ml adalah susu cair segar rendah lemak dengan kualitas tinggi dengan rasa cokelat. Cocok untuk yang sedang diet. Mengandung protein, kalsium, mineral, dan vitamin yang dibutuhkan untuk tubuh kita. Susu yang kaya akan nutrisi yang dikemas secara aseptik dengan menggunakan teknologi UHT juga dengan 6 lapisan karton yang terdiri dari polyethylene plastic, allumunium foil, dan kertas pelindung dari ultra violet, udara, dan bakteri untuk memastikan kesegaran susunya. Rasakan seluruh manfaat susu Ultra yang tinggi kalsium dalam setiap kemasannya. Produk ini direkomendasikan untuk konsumen yang berusia 1 tahun ke atas. Tersedia dalam kemasan tetrapak 250 ml.",
+      "status": "1",
+      "is_alfa_product": "0",
+      "price": "7600",
+      "product_special_price": "7400",
+      "product_special_price_to": "2023-03-18",
+      "product_special_price_from": "2023-03-12",
+      "product_alfagift_price": "8000",
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A13170001199_20200728142504738_base.jpg"
+        ]
+      },
+      "alfagift_platform": "1",
+      "product_pickup_availability": "1",
+      "product_is_groceries": "0",
+      "product_visibility_pdp": 296,
+      "product_category": "2",
+      "product_sub_category": "3",
+      "id": 16
     }
   ]
 }
