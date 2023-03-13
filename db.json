@@ -159,7 +159,7 @@
         ]
       },
       "alfagift_platform": "1",
-      "product_pickup_availability": 1,
+      "product_pickup_availability": "0",
       "product_is_groceries": 1,
       "product_visibility_pdp": 296,
       "product_category": "1",
@@ -569,6 +569,33 @@
       "product_category": "2",
       "product_sub_category": "3",
       "id": 16
+    },
+    {
+      "id": 17,
+      "product_id": "56296",
+      "product_sku": "A06790303633",
+      "product_name": "Cimory Susu UHT Bebas Laktosa 250 ml",
+      "product_desc": "Cimory Susu UHT Bebas Laktosa 250 ml adalah minuman susu rasa plain yang bebas kandungan laktosa serta mengandung berbagai macam vitamin yang berguna untuk tubuh, serta kandungan mineral, sumber fosfor dan kalsium yang tinggi. Terbuat dari susu Cimory yang asli dan terjamin keasliannya. Sangat cocok disajikan dalam keadaan dingin dan cocok untuk dikonsumsi setiap hari. Tersedia dalam kemasan tetrapak 250 ml.",
+      "product_stock": "12",
+      "status": "1",
+      "is_alfa_product": "0",
+      "price": "7000",
+      "product_special_price": "7000",
+      "product_special_price_to": "",
+      "product_special_price_from": "",
+      "product_alfagift_price": "7500",
+      "product_images": {
+        "type": "Base Image",
+        "url": [
+          "https://cs1.alfacart.com/product/1/1_A7254400001001_20211202110041378_base.jpg"
+        ]
+      },
+      "alfagift_platform": "1",
+      "product_pickup_availability": "1",
+      "product_is_groceries": "0",
+      "product_visibility_pdp": 296,
+      "product_category": "2",
+      "product_sub_category": "3"
     }
   ]
 }

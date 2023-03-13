@@ -34,7 +34,7 @@
                                                     </div>
                                                     <div class="col-lg-6 col-md-6 col-sm-12">
                                                         <b-input-group class="mb-3">            
-                                                            <label class="w-100 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Stock</label>
+                                                            <label class="w-100 mr-2" style="font-family: 'Lato', 'sans-serif';">Stock</label>
                                                             <b-input-group-prepend class="w-100 mr-2">
                                                                 <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
                                                                 <input disabled class="shadow-none form-control" v-model="product_stocks" style="border-radius: 0 10px 10px 0;"/>
@@ -66,10 +66,10 @@
                             <!-- </template>
                         </SlotForProductDetail> -->
                         
-                        <b-tab title="Product Prices" title-link-class="bg-light text-info" >
+                        <b-tab title="Product Prices" title-link-class="bg-light text-info">
                             <b-card-text>
                                 <div class="row">
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
                                         <b-input-group class="mb-3">            
                                             <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Price</label>
                                             <b-input-group-prepend class="w-100 ml-2 mr-2">
@@ -95,7 +95,7 @@
                                         </b-input-group>
                                     </div>
 
-                                    <div class="col-6">
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
                                         <b-input-group class="mb-3">            
                                             <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
                                             <b-input-group-prepend class="w-100 ml-2 mr-2">

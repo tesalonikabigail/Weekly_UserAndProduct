@@ -20,12 +20,14 @@
             </b-modal>
 
             <div class="container-fluid" style="width: 80%">
-                <div class="row">
+                <div class="row pt-1" style="width: 100%; display: flex; justify-content: center; align-items: center; margin: auto">
                     <div class="col-lg-6 col-md-8 col-sm-12 navbar navbar-light">
                         <form class="form-inline">
-                            <div class="col-12">
-                                <input class="shadow-none form-control mr-sm-2 col-lg-10 col-md-8 col-sm-8" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-info my-2 my-sm-0 col-lg-2 col-md-2 col-sm-2" type="submit"><b-icon icon="search"></b-icon></button>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><b-icon icon="search"></b-icon></span>
+                                </div>
+                                <input class="shadow-none form-control mr-sm-2 col-lg-10 col-md-8 col-sm-8" v-model="forSearch" type="search" placeholder="Search" aria-label="Search">
                             </div>
                         </form>
                     </div>
@@ -38,7 +40,7 @@
 
                 <div style="display: flex; jusitfy-content: center; align-items: center;"> <!-- row-cols-5 --> <!-- v-for="(p, index) in products" :key="index" -->
                     <div class="row mb-4">
-                        <div v-for="(d, index) in dataProducts" :key="index" class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
+                        <div v-for="(d, index) in forSearching" :key="index" class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-center">
                             <b-card bg-variant="light" :img-src="d.product_images.url[0]" img-alt="Image" img-top footer-tag="footer" style="max-width: 15rem; border-radius: 10px;" class="mb-2 mt-5">
                                 <p @click="toDetailProductData(d.id)" style="cursor: pointer; height: 4.5rem; font-family: 'Poppins', sans-serif; font-size: 15px">{{ d.product_name }}</p>
                                 <section v-if="d.product_special_price < d.price" style="height: 1rem">
@@ -78,8 +80,17 @@
     const activeID = ref(0);
     const cekDelete = ref(false);
     const dismissCountDown = ref(0);
+    const forSearch = ref("");
 
     const dataProducts = computed(() => $store.getters['products/fetchProduct']);
+    const forSearching = computed(() => {
+        if(forSearch.value !== ""){
+            const a = dataProducts?.value?.filter((item) => item.product_name.toUpperCase().includes(forSearch.value.toUpperCase()));
+            return a;
+        }
+        else
+            return dataProducts.value;
+    })
 
     const toDetailProductData = (id) => {
         router.push({ name:'detailProduct', params: { id: id } });
