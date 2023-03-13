@@ -35,8 +35,19 @@
             </b-modal>
 
             <div class="container-fluid" style="width: 80%;">
-                <b-table striped hover responsive caption-top :items="dataUser" :fields="field" align-items-center style="margin-top: 2%">
-                    <template #table-caption>All Users' Data</template>
+                <div class="mt-3 col-lg-6 col-md-8 col-sm-12 navbar navbar-light" style="padding-left: 0pt">
+                    <form class="form-inline">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><b-icon icon="search"></b-icon></span>
+                            </div>
+                            <input class="shadow-none form-control mr-sm-2 col-lg-10 col-md-8 col-sm-8" v-model="forSearch" type="search" placeholder="Search" aria-label="Search">
+                        </div>
+                    </form>
+                </div>
+
+                <b-table striped hover responsive caption-top :items="forSearching" :fields="field" :per-page="perPage" :current-page="currentPage" align-items-center style="margin-top: 2%">
+                    <!-- <template #table-caption>All Users' Data</template> -->
 
                     <template #cell(actions)="row">
                         <b-button size="sm" class="mr-2" variant="info" @click="showModal(row.item.id)">
@@ -47,6 +58,8 @@
                         </b-button>
                     </template>
                 </b-table>
+
+                <b-pagination v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="my-table"></b-pagination>
             </div>
         </b-overlay>
     </fragment>
@@ -76,15 +89,31 @@
     const dismissCountDown = ref(0);
     const notFinish = ref(false);
     const tempID = ref(0);
+    const forSearch = ref("");
+    const perPage = 8;
+    const currentPage = ref(1);
     // const outMsg = ref("");
     
     const dataUser = computed(() => $store.getters['regis/fetchUser']);
+    const rows = computed(() => dataUser.value.length);
     const ambilData = computed(() => {
         if(activeID.value !== 0){
             const a = dataUser.value.filter((item) => item.id == activeID.value) ?? {}; // diambil row yg button "update" nya di klik doang (krna pke filter)
             return (a.length > 0) ? a[0] : {};        // item yg diambil cmn item dengan id yg sama kyk activeID (id yg di klik button update nya)
         }
-    }); 
+    });
+    const forSearching = computed(() => {
+        if(forSearch.value !== ""){
+            const a = dataUser?.value?.filter(
+                (item) => item.fName.toUpperCase().includes(forSearch.value.toUpperCase()) ||
+                          item.lName.toUpperCase().includes(forSearch.value.toUpperCase()) ||
+                          item.email.includes(forSearch.value) || 
+                          item.noHP.includes(forSearch.value));
+            return a;
+        }
+        else
+            return dataUser.value;
+    })
 
     const confirmDeletion = async(conIn) => {
         if(conIn == 1){

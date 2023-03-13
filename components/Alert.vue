@@ -12,11 +12,12 @@
 
 <script setup>
     import { forAlert } from "../utils/regisValidation";
-    import { ref } from "vue";
+    import { ref, getCurrentInstance } from "vue";
 
     const outMsg = ref("");
     const dismissCountDown = ref(1);
     const props = defineProps(['aType']);
+    const router = getCurrentInstance().proxy.$router;
 
     if(props.aType == 1){
         outMsg.value = forAlert(1, "Updated");
@@ -36,7 +37,8 @@
     }
     else if(props.aType == 5){
         outMsg.value = forAlert(1, "Updated");
-        dismissCountDown.value = 2;
+        dismissCountDown.value = 3;
+        router.push({ name: "product" });
     }
     else if(props.aType == 6){
         outMsg.value = forAlert(2, "Updating");

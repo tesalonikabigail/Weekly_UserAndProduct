@@ -31,7 +31,7 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-lg-6 col-md-4 col-sm-12 mt-2" @click="toAddNewProduct" style="cursor: pointer; display: flex; justify-content: right; align-items: right;">
+                    <div class="col-lg-6 col-md-4 col-sm-12 mt-2" @click="toAddNewProduct" style="padding-right: 0pt; cursor: pointer; display: flex; justify-content: right; align-items: right;">
                         <p class="mt-2 mr-1" style="color: #31A2CB;">Add New Product</p>
                         <b-icon style="width: 5vw; height: 5vh;" icon="plus-square-fill" variant="info"></b-icon>
                     </div>
@@ -119,7 +119,7 @@
         else
             cekDelete.value = false;
     }
-    const toDeleteProductData = async(id) => {
+    const toDeleteProductData = (id) => {
         activeID.value = id;
         cekDelete.value = true;
     }

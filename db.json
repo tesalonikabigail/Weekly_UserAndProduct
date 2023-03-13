@@ -97,12 +97,12 @@
       "id": 12
     },
     {
-      "email": "semiim@gmail.com",
-      "password": "$2a$10$F81wOwf.xo5eBQ0Jos5s0uiTG5.NEqQFDYy70tnTMFhE7QU5b423u",
+      "id": 13,
       "fName": "Lim",
       "lName": "Semi",
+      "email": "semie@gmail.com",
       "noHP": "09896178641",
-      "id": 13
+      "password": "$2a$10$NGZz6VxGythTs8wJmCnSIuktlZv5eQogZO6H8bf3Uw3vw/hCsIik."
     },
     {
       "email": "seong5@gmail.com",
