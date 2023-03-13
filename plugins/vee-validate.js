@@ -46,3 +46,14 @@ extend('url', {
     },
     message: 'Input must be a valid URL'
 })
+
+extend('validDate', {
+    params: ['dateNow'],
+    validate(value, { dateNow }){
+        const a = new Date(value);
+        const temp = a.getFullYear() + "-" + (a.getMonth()+1) + "-" + a.getDate()
+
+        return temp < dateNow;
+    },
+    message: 'End Discount Date Input is Invalid'
+})

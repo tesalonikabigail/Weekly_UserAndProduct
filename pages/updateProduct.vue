@@ -47,12 +47,23 @@
                                 </b-input-group>
                             </ValidationProvider>
                             
-                            <ValidationProvider class="col-12" rules="required|url" v-slot="{ errors }">
+                            <ValidationProvider class="col-lg-6 col-md-6 col-sm-12" rules="required|url" v-slot="{ errors }">
                                 <b-input-group class="mb-3">            
                                     <label for="product_images" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Image (CDN)</label>
                                     <b-input-group-prepend class="w-100">
                                         <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
                                         <input class="shadow-none form-control" v-model="product_imagess" name="product_images" id="product_images" style="border-radius: 0 10px 10px 0;"/>
+                                    </b-input-group-prepend>
+                                    <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
+                                </b-input-group>
+                            </ValidationProvider>
+
+                            <ValidationProvider class="col-lg-6 col-md-6 col-sm-12" rules="required|numeric" v-slot="{ errors }">
+                                <b-input-group class="mb-3">            
+                                    <label for="product_stocks" class="w-100" style="font-family: 'Lato', 'sans-serif';">Product Stock</label>
+                                    <b-input-group-prepend class="w-100">
+                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                        <input class="shadow-none form-control" v-model="product_stocks" name="product_stocks" id="product_stocks" style="border-radius: 0 10px 10px 0;"/>
                                     </b-input-group-prepend>
                                     <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
                                 </b-input-group>
@@ -104,46 +115,28 @@
 
                             <section class="col-lg-6 col-md-6 col-sm-12" v-if="product_special_prices < prices">
                                 <ValidationProvider rules="required" v-slot="{ errors }">
-                                    <b-input-group class="mb-3">            
-                                        <label for="product_special_price_froms" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
-                                        <b-input-group-prepend class="w-100">
-                                            <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                            <input class="shadow-none form-control" v-model="product_special_price_froms" name="product_special_price_froms" id="product_special_price_froms" type="date" style="border-radius: 0 10px 10px 0;"/>
-                                        </b-input-group-prepend>
+                                    <label for="product_special_price_froms" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
+                                    <b-form-datepicker id="dateFrom" :min="date" :max="dateMax" v-model="product_special_price_froms" style="border-radius: 10px;">
                                         <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
-                                    </b-input-group>
+                                    </b-form-datepicker>
                                 </ValidationProvider>
 
-                                <ValidationProvider rules="required" v-slot="{ errors }">
-                                    <b-input-group class="mb-3">            
-                                        <label for="product_special_price_tos" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount End Date</label>
-                                        <b-input-group-prepend class="w-100">
-                                            <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                            <input class="shadow-none form-control" v-model="product_special_price_tos" name="product_special_price_tos" id="product_special_price_tos" type="date" style="border-radius: 0 10px 10px 0;"/>
-                                        </b-input-group-prepend>
+                                <ValidationProvider rules="required" v-slot="{ errors }"> <!-- :rules="`required|validDate:${ dateNow }`" -->
+                                    <label for="product_special_price_tos" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount End Date</label>
+                                    <b-form-datepicker id="dateTo" :min="date" v-model="product_special_price_tos" style="border-radius: 10px;">
                                         <span v-if="errors && errors.length > 0" style="color: red">{{ errors[0] }}</span>
-                                    </b-input-group>
+                                    </b-form-datepicker>
                                 </ValidationProvider>
                             </section>
                             <section v-else class="col-lg-6 col-md-6 col-sm-12">
                                 <ValidationProvider>
-                                    <b-input-group class="mb-3">            
-                                        <label for="product_special_price_froms" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
-                                        <b-input-group-prepend class="w-100">
-                                            <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                            <input class="shadow-none form-control" v-model="product_special_price_froms" name="product_special_price_froms" id="product_special_price_froms" type="date" style="border-radius: 0 10px 10px 0;"/>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
+                                    <label for="product_special_price_froms" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount Start Date</label>
+                                    <b-form-datepicker disabled class="mb-3" id="dateFrom" v-model="product_special_price_froms" style="border-radius: 10px;"></b-form-datepicker>
                                 </ValidationProvider>
 
                                 <ValidationProvider>
-                                    <b-input-group class="mb-3">            
-                                        <label for="product_special_price_tos" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount End Date</label>
-                                        <b-input-group-prepend class="w-100">
-                                            <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                            <input class="shadow-none form-control" v-model="product_special_price_tos" name="product_special_price_tos" id="product_special_price_tos" type="date" style="border-radius: 0 10px 10px 0;"/>
-                                        </b-input-group-prepend>
-                                    </b-input-group>
+                                    <label for="product_special_price_tos" class="w-100" style="font-family: 'Lato', 'sans-serif';">Discount End Date</label>
+                                    <b-form-datepicker disabled class="mb-3" id="dateTo" v-model="product_special_price_tos" style="border-radius: 10px;"></b-form-datepicker>
                                 </ValidationProvider>
                             </section>
 
@@ -218,7 +211,7 @@
 </template>
 
 <script setup>
-    import { ref, getCurrentInstance, computed, onMounted } from 'vue';
+    import { ref, getCurrentInstance, computed, onMounted, watch } from 'vue';
     import NavbarUsersPage from '../components/NavbarUsersPage.vue';
     
     const $root = getCurrentInstance().proxy.$root;
@@ -240,6 +233,7 @@
     const product_skus = ref(ambilData.value.product_sku);
     const product_names = ref(ambilData.value.product_name);
     const product_descs = ref(ambilData.value.product_desc);
+    const product_stocks = ref(ambilData.value.product_stock);
     const statuss = ref(ambilData.value.status);
     const is_alfa_products = ref(ambilData.value.is_alfa_product);
     const prices = ref(ambilData.value.price);
@@ -254,6 +248,15 @@
     const product_visibility_pdps = ref(ambilData.value.product_visibility_pdp);
     const product_categorys = ref(ambilData.value.product_category);
     const product_sub_categorys = ref(ambilData.value.product_sub_category);
+    const date = new Date();
+
+    const dateMax = computed(() => {
+        if(product_special_price_tos.value !== ""){
+            const t = new Date(product_special_price_tos.value);
+            t.setDate(t.getDate());
+            return t;
+        }
+    })
 
     const catOptions = ref([
         { value: null, text: 'Choose Product Category' },
@@ -299,6 +302,7 @@
                 product_sku: product_skus.value,
                 product_name: product_names.value,
                 product_desc: product_descs.value,
+                product_stock: product_stocks.value,
                 status: statuss.value,
                 is_alfa_product: is_alfa_products.value,
                 price: prices.value,

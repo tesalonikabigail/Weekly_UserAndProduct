@@ -2,7 +2,7 @@
     <fragment>
         <b-overlay :show="notFinish">
             <NavbarUsersPage />
-            <!-- <ProductCarousel /> -->
+            <ProductCarousel />
 
             <section v-if="dismissCountDown !== 0">
                 <Alert :aType="2"/>

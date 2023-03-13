@@ -9,47 +9,62 @@
             <div class="mb-4 mx-auto" style="width: 80%; height: 80%; justify-content: center;">
                 <b-card no-body>
                     <b-tabs active-nav-item-class="font-weight-bold" pills card vertical>
-                        <b-tab title="Product Details" title-link-class="bg-light text-info" active>
-                            <b-card-text>
-                                <!-- product_images, product_id, product_sku, product_name, product_desc -->
-                                <!-- price, product_special_price, product_special_price_to, product_special_price_from, product_alfagift_price -->
-                                <!-- status, is_alfa_product, alfagift_platform, product_pickup_availability, product_is_groceries, product_visibility_pdp, product_category, product_sub_category -->
-                                
-                                <!-- <slot name="product_details" :img="product_imagess" :pID="product_ids" :pSKU="product_skus" :pName="product_names" :pDesc="product_descs"></slot> -->
-                                
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-6">
-                                        <img class="img-fluid" style="display: flex; justify-content: center; align-items: center; margin: auto" :src="product_imagess"/>
-                                    </div>
-                                    <div class="col-lg-8 col-md-6 my-auto mx-auto">
-                                        <b-input-group class="mb-3">            
-                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product ID</label>
-                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                                <input disabled class="shadow-none form-control" v-model="product_ids" style="border-radius: 0 10px 10px 0;"/>
-                                            </b-input-group-prepend>
-                                        </b-input-group>
+                        <!-- <SlotForProductDetail>
+                            <template #pDetails> -->
+                                <b-tab title="Product Details" title-link-class="bg-light text-info" active>
+                                    <b-card-text>
+                                        <!-- product_images, product_id, product_sku, product_name, product_desc -->
+                                        <!-- price, product_special_price, product_special_price_to, product_special_price_from, product_alfagift_price -->
+                                        <!-- status, is_alfa_product, alfagift_platform, product_pickup_availability, product_is_groceries, product_visibility_pdp, product_category, product_sub_category -->
+                                                                                
+                                        <div class="row">
+                                            <div class="col-lg-4 col-md-6">
+                                                <img class="img-fluid" style="display: flex; justify-content: center; align-items: center; margin: auto" :src="product_imagess"/>
+                                            </div>
+                                            <div class="col-lg-8 col-md-6 my-auto mx-auto">
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <b-input-group class="mb-3">            
+                                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product ID</label>
+                                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                                <input disabled class="shadow-none form-control" v-model="product_ids" style="border-radius: 0 10px 10px 0;"/>
+                                                            </b-input-group-prepend>
+                                                        </b-input-group>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                                        <b-input-group class="mb-3">            
+                                                            <label class="w-100 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Stock</label>
+                                                            <b-input-group-prepend class="w-100 mr-2">
+                                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                                <input disabled class="shadow-none form-control" v-model="product_stocks" style="border-radius: 0 10px 10px 0;"/>
+                                                            </b-input-group-prepend>
+                                                        </b-input-group>
+                                                    </div>
+                                                </div>
 
-                                        <b-input-group class="mb-3">            
-                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product SKU</label>
-                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                                <input disabled class="shadow-none form-control" v-model="product_skus" style="border-radius: 0 10px 10px 0;"/>
-                                            </b-input-group-prepend>
-                                        </b-input-group>
+                                                <b-input-group class="mb-3">            
+                                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product SKU</label>
+                                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                        <input disabled class="shadow-none form-control" v-model="product_skus" style="border-radius: 0 10px 10px 0;"/>
+                                                    </b-input-group-prepend>
+                                                </b-input-group>
 
-                                        <b-input-group class="mb-3">            
-                                            <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Name</label>
-                                            <b-input-group-prepend class="w-100 ml-2 mr-2">
-                                                <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
-                                                <input disabled class="shadow-none form-control" v-model="product_names" style="border-radius: 0 10px 10px 0;"/>
-                                            </b-input-group-prepend>
-                                        </b-input-group>
-                                    </div>
-                                </div>
-                                <p style="text-align: justify;">{{ product_descs }}</p>
-                            </b-card-text>
-                        </b-tab>
+                                                <b-input-group class="mb-3">            
+                                                    <label class="w-100 ml-2 mr-2" style="font-family: 'Lato', 'sans-serif';">Product Name</label>
+                                                    <b-input-group-prepend class="w-100 ml-2 mr-2">
+                                                        <span class="input-group-text" style="border-radius: 10px 0 0 10px; background-color: white;"><b-icon icon="tags-fill"></b-icon></span>
+                                                        <input disabled class="shadow-none form-control" v-model="product_names" style="border-radius: 0 10px 10px 0;"/>
+                                                    </b-input-group-prepend>
+                                                </b-input-group>
+                                            </div>
+                                        </div>
+                                        <p style="text-align: justify;">{{ product_descs }}</p>
+                                    </b-card-text>
+                                </b-tab>
+                            <!-- </template>
+                        </SlotForProductDetail> -->
                         
                         <b-tab title="Product Prices" title-link-class="bg-light text-info" >
                             <b-card-text>
@@ -196,7 +211,7 @@
 <script setup>
     import { ref, getCurrentInstance, computed, onMounted } from "vue";
     import NavbarUsersPage from "../components/NavbarUsersPage.vue";
-    import SlotForProductDetail from "../components/Product/SlotForProductDetail.vue";
+    import SlotForProductDetail from "../components/Product/SlotForProductDetail.vue"; // penjelasan slot ada di SlotForProductDetail.vue
     
     const $root = getCurrentInstance().proxy.$root;
     const $store = $root.$store;
@@ -216,6 +231,7 @@
     const product_skus = ref(ambilData.value.product_sku);
     const product_names = ref(ambilData.value.product_name);
     const product_descs = ref(ambilData.value.product_desc);
+    const product_stocks = ref(ambilData.value.product_stock);
     const statuss = ref(ambilData.value.status);
     const is_alfa_products = ref(ambilData.value.is_alfa_product);
     const prices = ref(ambilData.value.price);
